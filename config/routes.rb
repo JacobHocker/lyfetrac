@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  get '/single/:movie_id/:api_key', to: "movies#get_single_movie"
   
   resources :users
   # Routing logic: fallback requests for React Router.
