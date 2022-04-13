@@ -1,11 +1,11 @@
-@use './assets/partials/colors';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 
 body {
   background-color: rgb(40,40,40);
   color: white;
   margin: 0;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 
