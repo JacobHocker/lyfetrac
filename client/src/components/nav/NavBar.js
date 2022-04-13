@@ -1,7 +1,7 @@
 import React from "react";
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
-import logoNav from '../../assets/images/ec-abbr-transparent.png';
+import logoNav from '../../assets/images/ec-nav-transparent.png';
 import './NavBar.scss';
 
 function NavBar(){
