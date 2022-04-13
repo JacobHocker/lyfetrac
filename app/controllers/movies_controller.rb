@@ -18,5 +18,7 @@ class MoviesController < ApplicationController
     # ! TOP RATED MOVIES PARAMS = API KEY & PAGE NUMBER
     def get_top_rated_movies
         url = "https://api.themoviedb.org/3/movie/top_rated?api_key=#{params[:api_key]}&language=en-US&page=#{params[:page_number]}"
+        response = HTTParty.get(url)
+        render json: response
     end
 end
