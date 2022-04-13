@@ -1,6 +1,7 @@
 import React from "react";
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
+import logoNav from '../../assets/images/ec-abbr-transparent.png';
 import './NavBar.scss';
 
 function NavBar(){
@@ -8,7 +9,9 @@ function NavBar(){
         <div className="nav-bar-container">
             <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">Entertainment Center</Navbar.Brand>
+                    <Navbar.Brand href="/">
+                        <img src={logoNav} className='nav-bar-logo' alt='entertainment-center' />
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
