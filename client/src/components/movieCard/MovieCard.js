@@ -5,10 +5,10 @@ import './MovieCard.scss';
 function MovieCard({ title, posterPath }) {
     return(
         <div className="card-container">
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w185${posterPath}`} />
+            <Card  className='movie-card'>
+                <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w185${posterPath}`}  className='movie-card-poster'/>
                 <Card.Body>
-                    <Card.Title>{title}</Card.Title>
+                    <Card.Title className='movie-card-title'>{title}</Card.Title>
                 </Card.Body>
             </Card>
         </div>

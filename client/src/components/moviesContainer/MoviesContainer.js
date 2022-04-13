@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { CardGroup } from 'react-bootstrap';
+import { CardGroup, Container } from 'react-bootstrap';
 import MovieCard from "../movieCard/MovieCard";
 import './MoviesContainer.scss';
 
@@ -7,7 +7,7 @@ function MoviesContainer() {
     const [movies, setMovies] = useState([]);
     
     const apiKey = '4a571a843827a09096250c11596c470d'
-    const pageNumber = 2
+    const pageNumber = 1
     useEffect(() => {
         fetch(`/top-rated/${apiKey}/${pageNumber}`)
         .then((r) => r.json())
@@ -19,6 +19,9 @@ function MoviesContainer() {
     
     return(
         <div className="movies-container">
+            <Container>
+                
+            </Container>
             <CardGroup>
                 {movies.results && results.map((movie) => (
                     <MovieCard

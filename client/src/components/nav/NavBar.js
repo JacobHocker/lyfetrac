@@ -7,7 +7,7 @@ import './NavBar.scss';
 function NavBar(){
     return(
         <div className="nav-bar-container">
-            <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="md" variant="dark">
                 <Container>
                     <Navbar.Brand href="/">
                         <img src={logoNav} className='nav-bar-logo' alt='entertainment-center' />
@@ -15,10 +15,9 @@ function NavBar(){
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                        <Nav.Link href="/movies">Movies</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
-                        <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                        <NavDropdown title="Film & TV" id="collapsible-nav-dropdown">
+                            <NavDropdown.Item href="/movies">Movies</NavDropdown.Item>
+                            <NavDropdown.Divider />
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>

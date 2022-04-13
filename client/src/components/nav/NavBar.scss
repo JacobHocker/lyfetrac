@@ -1,3 +1,24 @@
+@import '../../assets/partials/breakpoints';
+
+.nav-bar-container{
+    background-color: #505696;
+    border-bottom: 2px solid white;
+}
 .nav-bar-logo{
     width: 5rem;
+    @include small {
+        width: 5.5rem;
+    }
+    @include med{
+        width: 5.75rem;
+    }
+    @include large{
+        width: 6.25rem;
+    }
+    @include x-large{
+        width: 6.75rem;
+    }
+    @include xx-large{
+        width: 7.25rem;
+    }
 }
