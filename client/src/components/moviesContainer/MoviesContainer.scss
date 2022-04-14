@@ -1,14 +1,21 @@
 .movies-page-container{
     margin-top: 3rem;
 }
-.movie-container-header{
+.category-select-container{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.movie-container-header h1{
-    font-size: 3rem;
+.movie-category-select{
+    background: transparent;
+    color: white;
+    outline: transparent;
+    border: none;
+    font-size: 2rem;
+}
+.movie-category-option{
+    background: transparent;
+    theme
 }
 .page-select-container{
     display: flex;

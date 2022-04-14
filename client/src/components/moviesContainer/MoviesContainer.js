@@ -29,6 +29,8 @@ function MoviesContainer() {
     const apiKey = '4a571a843827a09096250c11596c470d'
     const pageNumber = activePage
 
+    
+    
 
     useEffect(() => {
         fetch(`/${activeCategory}/${apiKey}/${pageNumber}`)
@@ -37,6 +39,8 @@ function MoviesContainer() {
         });
     }, [pageNumber, activeCategory]);
     
+    const results = topRatedMovies.results
+
     const pageListDisplay = pages.map((page) => (
         <li className={activePage === page.value ? "active-page" : "inactive-page"}
             key={page.id}
@@ -45,22 +49,16 @@ function MoviesContainer() {
             {page.value}
             </li>
     ))
-    const results = topRatedMovies.results
-    console.log(activePage)
+    
+    
     return(
         <div className="movies-page-container">
             <Container>
-                <Row>
-                    <Col>
-                        <div className="movie-container-header">
-                            
-                        </div>
-                    </Col>
-                </Row>
+                
                 <Row>
                     <Col>
                         <div className="category-select-container">
-                            <h2>Categories:</h2>
+                            
                             <select 
                             className="movie-category-select"
                             value={activeCategory}
