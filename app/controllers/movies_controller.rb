@@ -21,4 +21,25 @@ class MoviesController < ApplicationController
         response = HTTParty.get(url)
         render json: response
     end
+
+    # ! POPULAR MOVIES PARAMS = API KEY & PAGE NUMBER
+    def get_popular_movies
+        url = "https://api.themoviedb.org/3/movie/popular?api_key=#{params[:api_key]}&language=en-US&page=#{params[:page_number]}"
+        response = HTTParty.get(url)
+        render json: response
+    end
+
+    # ! NOW PLAYING MOVIES PARAMS = API KEY & PAGE NUMBER
+    def get_now_playing_movies
+        url = "https://api.themoviedb.org/3/movie/now_playing?api_key=#{params[:api_key]}&language=en-US&page=#{params[:page_number]}"
+        response = HTTParty.get(url)
+        render json: response
+    end
+
+    # ! UPCOMING MOVIES PARAMS = API KEY & PAGE NUMBER
+    def get_upcoming_movies
+        url = "https://api.themoviedb.org/3/movie/upcoming?api_key=#{params[:api_key]}&language=en-US&page=#{params[:page_number]}"
+        response = HTTParty.get(url)
+        render json: response
+    end
 end

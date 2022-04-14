@@ -1,36 +1,106 @@
 import React, { useState, useEffect } from "react";
-import { CardGroup, Container } from 'react-bootstrap';
+import { CardGroup, Container, Row, Col } from 'react-bootstrap';
 import MovieCard from "../movieCard/MovieCard";
 import './MoviesContainer.scss';
 
 function MoviesContainer() {
-    const [movies, setMovies] = useState([]);
+    const [topRatedMovies, setTopRatedMovies] = useState([]);
+    const [activePage, setActivePage] = useState(1)
+    const [activeCategory, setActiveCategory] = useState("top-rated")
     
+    const categories = [
+        {id: 0, value: "top-rated", title: "Top Rated"},
+        {id: 1, value: "popular", title: "Popular"},
+        {id: 2, value: "now-playing", title: "Now Playing"},
+        {id: 3, value: "upcoming", title: "Upcoming"}
+    ]
+    const pages = [
+        {id: 1, value: 1},
+        {id: 2, value: 2},
+        {id: 3, value: 3},
+        {id: 4, value: 4},
+        {id: 5, value: 5},
+        {id: 6, value: 6},
+        {id: 7, value: 7},
+        {id: 8, value: 8},
+        {id: 9, value: 9},
+        {id: 10, value: 10},
+    ]
     const apiKey = '4a571a843827a09096250c11596c470d'
-    const pageNumber = 1
+    const pageNumber = activePage
+
+
     useEffect(() => {
-        fetch(`/top-rated/${apiKey}/${pageNumber}`)
+        fetch(`/${activeCategory}/${apiKey}/${pageNumber}`)
         .then((r) => r.json())
-        .then((movies) => { setMovies(movies);
+        .then((topRatedMovies) => { setTopRatedMovies(topRatedMovies);
         });
-    }, []);
+    }, [pageNumber, activeCategory]);
     
-    const results = movies.results
-    
+    const pageListDisplay = pages.map((page) => (
+        <li className={activePage === page.value ? "active-page" : "inactive-page"}
+            key={page.id}
+            onClick={() => setActivePage(page.value)}
+            >
+            {page.value}
+            </li>
+    ))
+    const results = topRatedMovies.results
+    console.log(activePage)
     return(
-        <div className="movies-container">
+        <div className="movies-page-container">
             <Container>
-                
-            </Container>
-            <CardGroup>
-                {movies.results && results.map((movie) => (
-                    <MovieCard
-                        key={movie.id}
-                        title={movie.title}
-                        posterPath={movie.poster_path}
+                <Row>
+                    <Col>
+                        <div className="movie-container-header">
+                            
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div className="category-select-container">
+                            <h2>Categories:</h2>
+                            <select 
+                            className="movie-category-select"
+                            value={activeCategory}
+                            name='category'
+                            onChange={(e) => setActiveCategory(e.target.value)}
+                            >
+                                {categories.map((cat) => (
+                                    <option 
+                                    key={cat.id} 
+                                    className='movie-category-option'
+                                    value={cat.value}
+                                    >
+                                    {cat.title}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div className="page-select-container">
+                            <h2>Pages:</h2>
+                            <ul className="page-list">
+                                {pageListDisplay}
+                            </ul>
+                        </div>
+                    </Col>
+                </Row>
+                <CardGroup>
+                    {topRatedMovies.results && results.map((movie) => (
+                        <MovieCard
+                            key={movie.id}
+                            title={movie.title}
+                            posterPath={movie.poster_path}
                         />
-                )) }
-            </CardGroup>
+                    )) }
+                </CardGroup>
+            </Container>
+            
             
         </div>
     );

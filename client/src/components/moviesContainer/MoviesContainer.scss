@@ -1,0 +1,38 @@
+.movies-page-container{
+    margin-top: 3rem;
+}
+.movie-container-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.movie-container-header h1{
+    font-size: 3rem;
+}
+.page-select-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-list{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.active-page{
+    margin: 0.5rem;
+    padding: 5px;
+    border: 1px solid white;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.inactive-page{
+    margin: 0.5rem;
+    padding: 5px;
+    border: 1px solid white;
+    &:hover{
+        cursor: pointer;
+    }
+}
