@@ -1,6 +1,8 @@
+@import '../../assets/partials/breakpoints';
+
 .movie-card{
-    width: 12rem;
-    height: 24rem;
+    width: 7.5rem;
+    height: 22rem;
     background-color: #373b69;
     border-radius: 5px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
@@ -11,10 +13,55 @@
         border: 1px solid white;
         border-radius: 5px;
     }
+    @include small {
+        width: 12rem;
+        height: 26rem;
+    }
+    @include med{
+        width: 14rem;
+        height: 30rem;
+    }
+    @include large{
+        width: 16rem;
+        height: 34rem;
+    }
+    
+}
+.great-rated-movie{
+    color: rgb(47, 255, 92);
+    font-size: 1.25rem;
+}
+.good-rated-movie{
+    color: aqua;
+    font-size: 1.25rem;
+}
+.fair-rated-movie{
+    color: yellow;
+    font-size: 1.25rem;
+}
+.poor-rated-movie{
+    color: red;
+    font-size: 1.25rem;
+}
+.terrible-rated-movie{
+    color: white;
+    font-size: 1.25rem;
+}
+.card-body{
+    overflow: hidden;
+}
+.card-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2d3157;
 }
 .card-container a{
     text-decoration: none;
     color: white;
+}
+.movie-card-title{
+    font-size: 1rem;
 }
 
 .movie-card-poster{
