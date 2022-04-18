@@ -94,9 +94,20 @@ function MoviesContainer() {
                             key={movie.id}
                             title={movie.title}
                             posterPath={movie.poster_path}
+                            id={movie.id}
                         />
                     )) }
                 </CardGroup>
+                <Row>
+                    <Col>
+                        <div className="page-select-container">
+                            <h2>Pages:</h2>
+                            <ul className="page-list">
+                                {pageListDisplay}
+                            </ul>
+                        </div>
+                    </Col>
+                </Row>
             </Container>
             
             
