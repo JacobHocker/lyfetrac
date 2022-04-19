@@ -4,11 +4,6 @@ import { Card } from 'react-bootstrap';
 import './MovieCard.scss';
 
 function MovieCard({ title, posterPath, id, rating }) {
-    const movieTitles = () => {
-        if(title.length <= 27) {
-
-        }
-    }
 
     const movieRatings = () => {
         if(rating <= 1.0) {

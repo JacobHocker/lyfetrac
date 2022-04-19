@@ -62,6 +62,15 @@
 }
 .movie-card-title{
     font-size: 1rem;
+    @include small {
+        font-size: 1.15rem;
+    }
+    @include med{
+        font-size: 1.25rem;
+    }
+    @include large{
+        font-size: 1.5rem;
+    }
 }
 
 .movie-card-poster{
