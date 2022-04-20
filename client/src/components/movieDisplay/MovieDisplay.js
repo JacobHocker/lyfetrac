@@ -16,12 +16,6 @@ function MovieDisplay() {
         });
     }, [id]);
 
-    const style = { 
-        backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.poster_path})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
-    }
 
     console.log(movie)
 

@@ -4,7 +4,7 @@ import MovieCard from "../movieCard/MovieCard";
 import './MoviesContainer.scss';
 
 function MoviesContainer() {
-    const [topRatedMovies, setTopRatedMovies] = useState([]);
+    const [movies, setMovies] = useState([]);
     const [activePage, setActivePage] = useState(1);
     const [activeCategory, setActiveCategory] = useState("popular");
     const [pageSet, setPageSet] = useState("page-set-one");
@@ -41,23 +41,18 @@ function MoviesContainer() {
     useEffect(() => {
         fetch(`/${activeCategory}/${apiKey}/${pageNumber}`)
         .then((r) => r.json())
-        .then((topRatedMovies) => { setTopRatedMovies(topRatedMovies);
+        .then((movies) => { setMovies(movies);
         });
     }, [pageNumber, activeCategory]);
     
-    const results = topRatedMovies.results
-    
-
-    
+    const results = movies.results
     
     return(
         <div className="movies-page-container">
             <Container>
-                
                 <Row>
                     <Col>
                         <div className="category-select-container">
-                            
                             <select 
                             className="movie-category-select"
                             value={activeCategory}
@@ -106,7 +101,7 @@ function MoviesContainer() {
                     </Col>
                 </Row>
                 <CardGroup>
-                    {topRatedMovies.results && results.map((movie) => (
+                    {movies.results && results.map((movie) => (
                         <MovieCard
                             key={movie.id}
                             title={movie.title}
