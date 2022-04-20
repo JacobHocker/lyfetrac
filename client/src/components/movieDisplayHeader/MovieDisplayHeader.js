@@ -4,6 +4,13 @@ import './MovieDisplayHeader.scss';
 
 function MovieDisplayHeader({ movie }) {
     
+    function timeConvert(num){
+        let hours = Math.floor(num / 60)
+        let minutes = num % 60
+        return hours+"h"+minutes+"m"
+    }
+    const runtime = timeConvert(movie.runtime)
+    
     return(
         <div className="movie-display-header-container">
             <Container>
@@ -14,20 +21,39 @@ function MovieDisplayHeader({ movie }) {
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat',
                         width: "100%",
-                        boxShadow: "inset 0 0 0 1000px rgba(52.5, 73.5, 115.5,.75)"
+                        boxShadow: "inset 0 0 0 1000px rgba(52.5, 73.5, 115.5,.8)"
                     }}>
                     <Row>
                         <Col>
-                            <div className="movie-display-title">
-                                <h1>{movie.title}</h1> 
-                                <h3>{movie.tagline}</h3>
-                            </div>
-                            
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
                             <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} className="movie-display-poster" />
+                        </Col>
+                        <Col>
+                            <div className="movie-display-title-container">
+                                <div className="movie-display-title">
+                                    <h1>{movie.title}</h1> 
+                                </div>
+                                <div className="movie-title-info-container">
+                                    <div className="movie-display-release">
+                                        <p>{movie.release_date}</p>
+                                    </div>
+                                    <div className="movie-display-genres">
+                                        {movie.genres.map((genre) => (
+                                            <p key={genre.id}>| {genre.name} |</p>
+                                        ))}
+                                    </div>
+                                    <div className="movie-display-time">
+                                        <p>{runtime}</p>
+                                    </div>
+                                </div>
+                                <div className="movie-display-interact-container">
+                                    <div className="movie-display-rating">
+                                        <p>{movie.vote_average}</p>
+                                    </div>
+                                </div>
+                                <div className="movie-tagline-display">
+                                    <h4><em>{movie.tagline}</em></h4>
+                                </div>
+                            </div>
                         </Col>
                     </Row>
                     

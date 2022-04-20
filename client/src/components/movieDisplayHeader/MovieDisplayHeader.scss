@@ -1,4 +1,22 @@
 @import '../../assets/partials/breakpoints';
 
 
-
+.movie-display-poster{
+    padding: 1rem;
+    border-radius: 10px;
+    width: 17rem;
+}
+.movie-display-title-container{
+    padding: 0.5rem;
+}
+.movie-title-info-container{
+    @include large{
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: -2.25rem;
+    }
+}
+.movie-display-genres{
+    display: flex;
+    flex-wrap: wrap;
+}
