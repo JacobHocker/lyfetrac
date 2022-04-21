@@ -26,7 +26,7 @@ function MovieDisplayHeader({ movie }) {
             return <p className="display-great-rated">{ratingPercentage}%</p>
         }
     }
-    
+    console.log(movie)
     return(
         <div className="movie-display-header-container">
             <Container>
@@ -41,7 +41,9 @@ function MovieDisplayHeader({ movie }) {
                     }}>
                     <Row>
                         <Col>
-                            <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} className="movie-display-poster" />
+                            <div className="movie-poster-display-container">
+                                <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} className="movie-display-poster" />
+                            </div>
                         </Col>
                         <Col>
                             <div className="movie-display-title-container">

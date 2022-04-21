@@ -7,38 +7,39 @@ class MoviesController < ApplicationController
         response = HTTParty.get(url)
         render json: response
     end
-
     # ! SEARCH MOVIE PARAMS = SEARCH TERM & API KEY
     def get_movie_search
         url = "https://api.themoviedb.org/3/search/movie?api_key=#{params[:api_key]}&language=en-US&query=#{params[:search_term]}&page=1"
         response = HTTParty.get(url)
         render json: response
     end
-
     # ! TOP RATED MOVIES PARAMS = API KEY & PAGE NUMBER
     def get_top_rated_movies
         url = "https://api.themoviedb.org/3/movie/top_rated?api_key=#{params[:api_key]}&language=en-US&page=#{params[:page_number]}"
         response = HTTParty.get(url)
         render json: response
     end
-
     # ! POPULAR MOVIES PARAMS = API KEY & PAGE NUMBER
     def get_popular_movies
         url = "https://api.themoviedb.org/3/movie/popular?api_key=#{params[:api_key]}&language=en-US&page=#{params[:page_number]}"
         response = HTTParty.get(url)
         render json: response
     end
-
     # ! NOW PLAYING MOVIES PARAMS = API KEY & PAGE NUMBER
     def get_now_playing_movies
         url = "https://api.themoviedb.org/3/movie/now_playing?api_key=#{params[:api_key]}&language=en-US&page=#{params[:page_number]}"
         response = HTTParty.get(url)
         render json: response
     end
-
     # ! UPCOMING MOVIES PARAMS = API KEY & PAGE NUMBER
     def get_upcoming_movies
         url = "https://api.themoviedb.org/3/movie/upcoming?api_key=#{params[:api_key]}&language=en-US&page=#{params[:page_number]}"
+        response = HTTParty.get(url)
+        render json: response
+    end
+    # ! MOVIE CREDITS PARAMS = API KEY & MOVIE ID
+    def get_movie_credits
+        url = "https://api.themoviedb.org/3/movie/#{params[:movie_id]}/credits?api_key=#{params[:api_key]}"
         response = HTTParty.get(url)
         render json: response
     end

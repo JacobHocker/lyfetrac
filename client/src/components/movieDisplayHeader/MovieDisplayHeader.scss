@@ -1,6 +1,12 @@
 @import '../../assets/partials/breakpoints';
 
-
+.movie-display-header-container{
+    width: 100%;
+}
+.movie-poster-display-container{
+    display: flex;
+    justify-content: center;
+}
 .movie-display-poster{
     padding: 1rem;
     border-radius: 20px;
@@ -35,9 +41,6 @@
 .movie-display-title-container p{
     @include large{
         font-size: 1.5rem;
-    }
-    @include x-large{
-        font-size: 1.75rem;
     }
 }
 .movie-title-info-container{
@@ -97,8 +100,8 @@
 }
 .display-good-rated{
     color: aqua;
-    padding: 0.79rem;
-    border: 1px solid aqua;
+    padding: 0.70rem;
+    border: 3px solid aqua;
     border-radius: 50%;
 }
 .display-great-rated{
