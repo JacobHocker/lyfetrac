@@ -3,7 +3,7 @@
 
 .movie-display-poster{
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 17rem;
 }
 .movie-display-title-container{
@@ -19,4 +19,7 @@
 .movie-display-genres{
     display: flex;
     flex-wrap: wrap;
+}
+.movie-display-interact-container{
+    display: flex;
 }

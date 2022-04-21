@@ -1,5 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { AiOutlineUnorderedList, AiOutlineStar } from "react-icons/ai";
+import { BsFillPlayFill } from "react-icons/bs";
 import './MovieDisplayHeader.scss';
 
 function MovieDisplayHeader({ movie }) {
@@ -47,11 +49,28 @@ function MovieDisplayHeader({ movie }) {
                                 </div>
                                 <div className="movie-display-interact-container">
                                     <div className="movie-display-rating">
-                                        <p>{movie.vote_average}</p>
+                                        <p>{movie.vote_average}/10</p>
+                                    </div>
+                                    <div className="movie-display-favorite">
+                                        <AiOutlineStar />
+                                    </div>
+                                    <div className="movie-display-to-list">
+                                        <AiOutlineUnorderedList />
+                                    </div>
+                                    <div className="movie-display-trailer">
+                                        <BsFillPlayFill />
                                     </div>
                                 </div>
                                 <div className="movie-tagline-display">
                                     <h4><em>{movie.tagline}</em></h4>
+                                </div>
+                                <div className="movie-summary-container">
+                                    <div className="movie-summary-header">
+                                        <h3>Summary</h3>
+                                    </div>
+                                    <div className="movie-summary-body">
+                                        <p>{movie.overview}</p>
+                                    </div>
                                 </div>
                             </div>
                         </Col>
