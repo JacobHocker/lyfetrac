@@ -26,7 +26,7 @@ function MovieDisplayHeader({ movie }) {
             return <p className="display-great-rated">{ratingPercentage}%</p>
         }
     }
-    console.log(movie)
+    
     return(
         <div className="movie-display-header-container">
             <Container>

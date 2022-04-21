@@ -1,1 +1,6 @@
 @import '../../assets/partials/breakpoints';
+
+.cast-container{
+    display: flex;
+    overflow: scroll;
+}

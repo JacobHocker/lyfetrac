@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Container,Row, Col } from "react-bootstrap";
 import MovieDisplayHeader from "../movieDisplayHeader/MovieDisplayHeader";
 import './MovieDisplayContainer.scss';
+import MovieDisplayCast from "../movieDisplayCast/MovieDisplayCast";
 
 function MovieDisplayContainer() {
     const [movie, setMovie] = useState({});
@@ -25,10 +26,11 @@ function MovieDisplayContainer() {
     }, [id]);
 
     
-    console.log(credits)
+    
     return(
         <div className="movie-display-container">
             {movie.title && <MovieDisplayHeader movie={movie} />}
+            {credits.cast && <MovieDisplayCast cast={credits.cast} />}
         </div>
     );
 };
