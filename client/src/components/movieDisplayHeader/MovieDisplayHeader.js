@@ -12,6 +12,20 @@ function MovieDisplayHeader({ movie }) {
         return hours+"h"+minutes+"m"
     }
     const runtime = timeConvert(movie.runtime)
+    const ratingPercentage = (movie.vote_average / 10) * 100
+    const movieRatings = () => {
+        if(ratingPercentage <= 10) {
+            return <p className="display-terrible-rated">{ratingPercentage}%</p>
+        } if (ratingPercentage >= 10 && ratingPercentage <= 30) {
+            return <p className="display-poor-rated">{ratingPercentage}%</p>
+        } if (ratingPercentage >= 30 && ratingPercentage <= 60) {
+            return <p className="display-fair-rated">{ratingPercentage}%</p>
+        } if (ratingPercentage >= 60 && ratingPercentage <= 90) {
+            return <p className="display-good-rated">{ratingPercentage}%</p>
+        } else {
+            return <p className="display-great-rated">{ratingPercentage}%</p>
+        }
+    }
     
     return(
         <div className="movie-display-header-container">
@@ -38,27 +52,22 @@ function MovieDisplayHeader({ movie }) {
                                     <div className="movie-display-release">
                                         <p>{movie.release_date}</p>
                                     </div>
-                                    <div className="movie-display-genres">
-                                        {movie.genres.map((genre) => (
-                                            <p key={genre.id}>| {genre.name} |</p>
-                                        ))}
-                                    </div>
                                     <div className="movie-display-time">
                                         <p>{runtime}</p>
                                     </div>
                                 </div>
                                 <div className="movie-display-interact-container">
                                     <div className="movie-display-rating">
-                                        <p>{movie.vote_average}/10</p>
+                                        {movieRatings()}
                                     </div>
                                     <div className="movie-display-favorite">
-                                        <AiOutlineStar />
+                                        <AiOutlineStar className="movie-display-add-favorite"/>
                                     </div>
                                     <div className="movie-display-to-list">
-                                        <AiOutlineUnorderedList />
+                                        <AiOutlineUnorderedList className="movie-display-add-list"/>
                                     </div>
                                     <div className="movie-display-trailer">
-                                        <BsFillPlayFill />
+                                        <BsFillPlayFill className="movie-display-play-button"/>
                                     </div>
                                 </div>
                                 <div className="movie-tagline-display">
@@ -71,6 +80,11 @@ function MovieDisplayHeader({ movie }) {
                                     <div className="movie-summary-body">
                                         <p>{movie.overview}</p>
                                     </div>
+                                </div>
+                                <div className="movie-display-genres">
+                                    {movie.genres.map((genre) => (
+                                        <p key={genre.id}>| {genre.name} |</p>
+                                    ))}
                                 </div>
                             </div>
                         </Col>
