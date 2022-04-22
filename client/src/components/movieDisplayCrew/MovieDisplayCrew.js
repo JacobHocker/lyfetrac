@@ -1,25 +1,25 @@
 import React from "react";
-import './MovieDisplayCast.scss';
+import './MovieDisplayCrew.scss';
 import { Container, Row, Col, Card } from "react-bootstrap";
 import Carousel from 'react-multi-carousel';
 import defaultPicture from '../../assets/images/defaultprofile.png';
 
-function MovieDisplayCast({ cast }) {
+function MovieDisplayCrew( { crew }) {
     
-    
-    const castMap = cast.map((cast) => (
-            <div className="cast-cards-carousel-item" key={cast.id}>
-                <Card  className='cast-card'>
-                    <Card.Img variant="top" src={cast.profile_path === null ? defaultPicture :`https://image.tmdb.org/t/p/w185${cast.profile_path}`}  className='cast-card-img'/>
-                    <Card.Body>
-                        <Card.Title className='cast-card-title'>{cast.name}</Card.Title> 
-                    </Card.Body>
-                    <Card.Footer>
-                        <Card.Text className="cast-card-footer">{cast.character}</Card.Text>
-                    </Card.Footer>
-                </Card>
-            </div>
+    const crewMap = crew.map((crew) => (
+        <div className="crew-cards-carousel-item" key={crew.id}>
+            <Card  className='crew-card'>
+                <Card.Img variant="top" src={crew.profile_path === null ? defaultPicture :`https://image.tmdb.org/t/p/w185${crew.profile_path}`}  className='crew-card-img'/>
+                <Card.Body>
+                    <Card.Title className='crew-card-title'>{crew.name}</Card.Title> 
+                </Card.Body>
+                <Card.Footer>
+                    <Card.Text className="crew-card-footer">{crew.job}</Card.Text>
+                </Card.Footer>
+            </Card>
+        </div>
     ))
+
     const responsive = {
         xxLarge: {
             breakpoint: { max: 3000, min: 1401 },
@@ -46,28 +46,26 @@ function MovieDisplayCast({ cast }) {
             items: 2
         }
     };
-
-
     return(
-        <div className="movie-cast-display-container">
+        <div className="movie-crew-display-container">
             <Container>
                 <Row>
                     <Col>
-                        <div className="movie-cast-display-title">
-                            <h1>Top Billed Cast</h1>
+                        <div className="movie-crew-display-title">
+                            <h1>Crew</h1>
                         </div>
                     </Col>
                 </Row>
                 <Row>
-                    <Col className="cast-carousel-col">
+                    <Col className="crew-carousel-col">
                         <Carousel responsive={responsive} showDots={false} autoPlay={false} >
-                            {castMap}
+                            {crewMap}
                         </Carousel>
                     </Col>
                 </Row>
             </Container>
         </div>
     );
-};
+}
 
-export default MovieDisplayCast;
+export default MovieDisplayCrew;

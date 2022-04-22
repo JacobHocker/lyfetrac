@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
-import MovieDisplayHeader from "../movieDisplayHeader/MovieDisplayHeader";
 import './MovieDisplayContainer.scss';
+import MovieDisplayHeader from "../movieDisplayHeader/MovieDisplayHeader";
 import MovieDisplayCast from "../movieDisplayCast/MovieDisplayCast";
+import MovieDisplayCrew from "../movieDisplayCrew/MovieDisplayCrew";
 
 function MovieDisplayContainer() {
     const [movie, setMovie] = useState({});
@@ -31,6 +31,7 @@ function MovieDisplayContainer() {
         <div className="movie-display-container">
             {movie.title && <MovieDisplayHeader movie={movie} />}
             {credits.cast && <MovieDisplayCast cast={credits.cast} />}
+            {credits.crew && <MovieDisplayCrew crew={credits.crew} />}
         </div>
     );
 };
