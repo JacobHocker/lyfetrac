@@ -37,7 +37,7 @@ function MovieDisplayHeader({ movie }) {
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat',
                         width: "100%",
-                        boxShadow: "inset 0 0 0 1000px rgba(52.5, 73.5, 115.5,.8)"
+                        boxShadow: "inset 0 0 0 1000px rgba(52.5, 73.5, 115.5,.85)"
                     }}>
                     <Row>
                         <Col>

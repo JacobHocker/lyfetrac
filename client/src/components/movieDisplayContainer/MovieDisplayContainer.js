@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Container,Row, Col } from "react-bootstrap";
+
 import MovieDisplayHeader from "../movieDisplayHeader/MovieDisplayHeader";
 import './MovieDisplayContainer.scss';
 import MovieDisplayCast from "../movieDisplayCast/MovieDisplayCast";
