@@ -1,7 +1,7 @@
 import React from 'react';
-import './MovieDisplayRecommend.scss'
+import './MovieDisplaySimilar.scss'
 
-function MovieDisplayRecommend() {
+function MovieDisplaySimilar() {
     return(
         <div className='movie-display-recommend-container'>
             <h1>Recommendation Center</h1>
@@ -9,4 +9,4 @@ function MovieDisplayRecommend() {
     );
 }
 
-export default MovieDisplayRecommend;
+export default MovieDisplaySimilar;
