@@ -28,10 +28,16 @@ function MovieDisplayInfo({ movie }) {
                             <h3>Produced By:</h3>
                             <div className="display-production-companies-container">
                                 {movie.production_companies.map((company) => (
-                                    <div className="display-production-company" key={company.id}>
-                                        <img src={`https://image.tmdb.org/t/p/w185${company.logo_path}`} alt={company.name} className='display-company-logo' />
-                                        <p>{company.name}</p>
-                                    </div>
+                                    company.logo === null ? 
+                                        <div className="display-production-company" key={company.id}>
+                                            <h3>{company.name}</h3>
+                                        </div>
+                                        :
+                                        <div className="display-production-company" key={company.id}>
+                                            <img src={`https://image.tmdb.org/t/p/w185${company.logo_path}`} alt={company.name} className='display-company-logo' />
+                                            <p>{company.name}</p>
+                                        </div>
+                                    
                                 ))}
                             </div>
                         </div>

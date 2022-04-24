@@ -43,4 +43,17 @@ class MoviesController < ApplicationController
         response = HTTParty.get(url)
         render json: response
     end
+    # ! MOVIE RECOMMENDATIONS = MOVIE ID & API KEY
+    def get_movie_recommend
+        url = "https://api.themoviedb.org/3/movie/#{params[:movie_id]}/recommendations?api_key=#{params[:api_key]}"
+        response = HTTParty.get(url)
+        render json: response
+    end
+    # ! MOVIE REVIEWS = MOVIE ID & API KEY & PAGE NUMBER
+    def get_movie_reviews
+        url = "https://api.themoviedb.org/3/movie/#{params[:movie_id]}/reviews?api_key=#{params[:api_key]}&page=#{params[:page_number]}"
+        response = HTTParty.get(url)
+        render json: response
+    end
+
 end

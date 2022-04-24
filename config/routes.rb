@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   get '/now-playing/:api_key/:page_number', to: "movies#get_now_playing_movies"
   get '/popular/:api_key/:page_number', to: "movies#get_popular_movies"
   get '/credits/:movie_id/:api_key', to: "movies#get_movie_credits"
-  
+  get '/recommendations/:movie_id/:api_key', to: "movies#get_movie_recomend"
+  get '/reviews/:movie_id/:api_key/:page_number', to: "movies#get_movie_reviews"
   resources :users
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
