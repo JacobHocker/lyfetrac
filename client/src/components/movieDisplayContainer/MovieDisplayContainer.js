@@ -5,11 +5,12 @@ import MovieDisplayHeader from "../movieDisplayHeader/MovieDisplayHeader";
 import MovieDisplayCast from "../movieDisplayCast/MovieDisplayCast";
 import MovieDisplayCrew from "../movieDisplayCrew/MovieDisplayCrew";
 import MovieDisplayInfo from "../movieDisplayInfo/MovieDisplayInfo";
+import MovieDisplayRecommend from "../movieDisplayRecommend/MovieDisplayRecommend";
 
 function MovieDisplayContainer() {
     const [movie, setMovie] = useState({});
     const [credits, setCredits] = useState({});
-    const [similarMovies, setSimilarMovies] = useState([]);
+    const [recommendations, setRecommendations] = useState([]);
     const [movieReviews, setMovieReviews] = useState([]);
 
     const apiKey = '4a571a843827a09096250c11596c470d';
@@ -29,11 +30,11 @@ function MovieDisplayContainer() {
         .then((credits) => { setCredits(credits);
         });
     }, [id]);
-    //Similar Movies
+    //Recommended Movies
     useEffect(() => {
-        fetch(`/similar/${id}/${apiKey}/${pageNumber}`)
+        fetch(`/recommendations/${id}/${apiKey}/${pageNumber}`)
         .then((r) => r.json())
-        .then((similarMovies) => { setSimilarMovies(similarMovies);
+        .then((recommendations) => { setRecommendations(recommendations);
         });
     }, [id]);
     //Movie Reviews
@@ -50,6 +51,7 @@ function MovieDisplayContainer() {
             {credits.cast && <MovieDisplayCast cast={credits.cast} />}
             {movie.title && <MovieDisplayInfo movie={movie} />}
             {credits.crew && <MovieDisplayCrew crew={credits.crew} />}
+            {recommendations.page && <MovieDisplayRecommend movies={recommendations}/>}
         </div>
     );
 };

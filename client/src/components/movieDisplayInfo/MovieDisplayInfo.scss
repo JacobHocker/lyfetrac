@@ -47,10 +47,6 @@
 }
 .movie-detail-list{
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-size: 1.15rem;
     @include small{
         font-size: 1.35rem;
