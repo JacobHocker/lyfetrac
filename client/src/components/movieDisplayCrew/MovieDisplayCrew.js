@@ -52,7 +52,7 @@ function MovieDisplayCrew( { crew }) {
                 <Row>
                     <Col>
                         <div className="movie-crew-display-title">
-                            <h1>Crew</h1>
+                            <h1>Crew & Staff</h1>
                         </div>
                     </Col>
                 </Row>
