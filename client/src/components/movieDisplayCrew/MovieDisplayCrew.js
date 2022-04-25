@@ -48,7 +48,7 @@ function MovieDisplayCrew( { crew }) {
     };
     return(
         <div className="movie-crew-display-container">
-            <Container>
+            <Container className="crew-carousel-col">
                 <Row>
                     <Col>
                         <div className="movie-crew-display-title">
@@ -57,7 +57,7 @@ function MovieDisplayCrew( { crew }) {
                     </Col>
                 </Row>
                 <Row>
-                    <Col className="crew-carousel-col">
+                    <Col >
                         <Carousel responsive={responsive} showDots={false} autoPlay={false} >
                             {crewMap}
                         </Carousel>

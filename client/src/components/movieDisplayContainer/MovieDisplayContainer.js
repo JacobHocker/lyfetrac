@@ -7,6 +7,7 @@ import MovieDisplayCrew from "../movieDisplayCrew/MovieDisplayCrew";
 import MovieDisplayInfo from "../movieDisplayInfo/MovieDisplayInfo";
 import MovieDisplayRecommend from "../movieDisplayRecommend/MovieDisplayRecommend";
 import MovieDisplayCollection from "../movieDisplayCollection/MovieDisplayCollection";
+import MovieDisplayReviewsContainer from "../movieDisplayReviewsContainer/MovieDisplayReviewsContainer";
 
 function MovieDisplayContainer() {
     const [movie, setMovie] = useState({});
@@ -45,13 +46,14 @@ function MovieDisplayContainer() {
         .then((movieReviews) => { setMovieReviews(movieReviews);
         });
     }, [id]);
-    console.log(movie)
+    
     return(
         <div className="movie-display-container">
             {movie.title && <MovieDisplayHeader movie={movie} />}
             {credits.cast && <MovieDisplayCast cast={credits.cast} />}
             {movie.title && <MovieDisplayInfo movie={movie} />}
             {movie.belongs_to_collection === null ? <div></div> : movie.belongs_to_collection && <MovieDisplayCollection collection={movie.belongs_to_collection} />}
+            {movieReviews.page && <MovieDisplayReviewsContainer reviews={movieReviews} />}
             {credits.crew && <MovieDisplayCrew crew={credits.crew} />}
             {recommendations.page && <MovieDisplayRecommend movies={recommendations}/>}
         </div>

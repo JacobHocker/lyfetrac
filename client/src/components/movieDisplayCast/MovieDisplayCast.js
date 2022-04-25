@@ -50,7 +50,7 @@ function MovieDisplayCast({ cast }) {
 
     return(
         <div className="movie-cast-display-container">
-            <Container>
+            <Container className="cast-carousel-col">
                 <Row>
                     <Col>
                         <div className="movie-cast-display-title">
@@ -59,7 +59,7 @@ function MovieDisplayCast({ cast }) {
                     </Col>
                 </Row>
                 <Row>
-                    <Col className="cast-carousel-col">
+                    <Col>
                         <Carousel responsive={responsive} showDots={false} autoPlay={false} >
                             {castMap}
                         </Carousel>
