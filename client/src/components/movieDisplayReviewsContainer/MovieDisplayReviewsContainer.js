@@ -4,8 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import './MovieDisplayReviewsContainer.scss';
 
 function MovieDisplayReviewsContainer({ reviews }) {
-    console.log(reviews)
-
     const reviewMap = reviews.results.map((review) => (
         <MovieDisplayReviewCard
             key={review.id}

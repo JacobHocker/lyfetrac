@@ -2,12 +2,8 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import './MovieDisplayReviewCard.scss'
 
-function MovieDisplayReviewCard({author, authorDetails, content}) {
-    // const authorMap = authorDetails.map((detail) => (
-    //     <div className="review-card-header">
-    //         <img src={detail.avatar_path} alt={detail.username} className='review-author-image' />{detail.username}
-    //     </div>
-    // ))
+function MovieDisplayReviewCard({ authorDetails, content }) {
+    
     return(
         <div className="display-review-card-container">
             <Card className="movie-review-card">

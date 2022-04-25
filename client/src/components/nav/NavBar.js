@@ -16,11 +16,29 @@ function NavBar(){
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                         <NavDropdown title="Film & TV" id="collapsible-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.4">Search Movies</NavDropdown.Item>
+                            <NavDropdown.Divider />
                             <NavDropdown.Item href="/movies">Movies</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">People</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">Collections</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">Production Companies</NavDropdown.Item>
+                        </NavDropdown>
+                        <NavDropdown title="Music" id="collapsible-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.4">Search Movies</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="/movies">Movies</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">People</NavDropdown.Item>
+                        </NavDropdown>
+                        <NavDropdown title="Gaming" id="collapsible-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.4">Search Movies</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="/movies">Movies</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">People</NavDropdown.Item>
                         </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
