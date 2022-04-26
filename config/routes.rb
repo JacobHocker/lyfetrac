@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  # MOVIES
+  # ! MOVIES
   get '/single/:movie_id/:api_key', to: "movies#get_single_movie"
   get '/movie-search/:api_key/:search_term', to: "movies#get_movie_search"
   get '/upcoming/:api_key/:page_number', to: "movies#get_upcoming_movies"
@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   get '/recommendations/:movie_id/:api_key/:page_number', to: "movies#get_movie_recommend"
   get '/reviews/:movie_id/:api_key/:page_number', to: "movies#get_movie_reviews"
   get '/similar/:movie_id/:api_key/:page_number', to: "movies#get_similar_movies"
+  
+  # ! PEOPLE
+  get '/popular-people/:api_key/:page_number'. to: "persons#get_popular_people"
+  
   resources :users
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!

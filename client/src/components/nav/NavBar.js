@@ -16,7 +16,7 @@ function NavBar(){
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                         <NavDropdown title="Film & TV" id="collapsible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.4">Search Movies</NavDropdown.Item>
+                            <NavDropdown.Item href="/movies/search">Search Movies</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="/movies">Movies</NavDropdown.Item>
                             <NavDropdown.Divider />
@@ -41,7 +41,12 @@ function NavBar(){
                             <NavDropdown.Item href="#action/3.4">People</NavDropdown.Item>
                         </NavDropdown>
                         </Nav>
+                        <button>Login</button>
+                        <button>Logout</button>
+                        <h2>Username</h2>
+                        <p>User Image</p>
                     </Navbar.Collapse>
+                    
                 </Container>
             </Navbar>
         </div>
