@@ -5,6 +5,8 @@ import MovieDisplayContainer from './components/movieDisplayContainer/MovieDispl
 import MoviesContainer from './components/moviesContainer/MoviesContainer';
 import MovieSearchContainer from './components/movieSearchContainer/MovieSearchContainer';
 import NavBar from './components/nav/NavBar';
+import PeopleContainer from './components/peopleContainer/PeopleContainer';
+import PeopleDisplayContainer from './components/peopleDisplayContainer/PeopleDisplayContainer';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path='movies' element={<MoviesContainer />} />
         <Route path='movies/:id' element={<MovieDisplayContainer />} />
         <Route path='movies/search' element={<MovieSearchContainer />} />
+        <Route path='/people' element={<PeopleContainer />} />
+        <Route path='/people/:id' element={<PeopleDisplayContainer />} />
       </Routes>
     </div>
   );

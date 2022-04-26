@@ -20,7 +20,7 @@ function NavBar(){
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="/movies">Movies</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">People</NavDropdown.Item>
+                            <NavDropdown.Item href="/people">People</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action/3.4">Collections</NavDropdown.Item>
                             <NavDropdown.Divider />
