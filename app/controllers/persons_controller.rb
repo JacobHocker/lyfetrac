@@ -7,4 +7,10 @@ class PersonsController < ApplicationController
         response = HTTParty.get(url)
         render json: response
     end
+    # ! SINGLE PERSON DETAILS = PERSON ID & API KEY
+    def get_person_details
+        url = "https://api.themoviedb.org/3/person/#{params[:person_id]}?api_key=#{params[:api_key]}&language=en-US"
+        response = HTTParty.get(url)
+        render json: response
+    end
 end

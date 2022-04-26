@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   get '/similar/:movie_id/:api_key/:page_number', to: "movies#get_similar_movies"
   
   # ! PEOPLE
-  get '/popular-people/:api_key/:page_number'. to: "persons#get_popular_people"
+  get '/popular-people/:api_key/:page_number', to: "persons#get_popular_people"
+  get '/single-person/:person_id/:api_key', to: "persons#get_person_details"
   
   resources :users
   # Routing logic: fallback requests for React Router.

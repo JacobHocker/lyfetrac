@@ -1,0 +1,56 @@
+@import '../../assets/partials/breakpoints';
+
+.people-card{
+    width: 7.5rem;
+    height: 22rem;
+    background-color: #373b69;
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
+    margin: 1rem;
+    color: white;
+    &:hover{
+        transform: scale(110%);
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+    @include small {
+        width: 12rem;
+        height: 26rem;
+    }
+    @include med{
+        width: 14rem;
+        height: 30rem;
+    }
+    @include large{
+        width: 16rem;
+        height: 34rem;
+    }
+    
+}
+
+.people-card-container a{
+    text-decoration: none;
+    color: white;
+}
+.people-card-name{
+    font-size: 1rem;
+    @include small {
+        font-size: 1.15rem;
+    }
+    @include med{
+        font-size: 1.25rem;
+    }
+    @include large{
+        font-size: 1.5rem;
+    }
+}
+
+.people-card-image{
+    width: 100%;
+}
+.people-card-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2d3157;
+}
