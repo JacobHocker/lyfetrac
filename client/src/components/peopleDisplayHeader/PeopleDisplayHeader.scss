@@ -1,0 +1,121 @@
+@import '../../assets/partials/breakpoints';
+
+.people-display-header-container{
+    background-color: #555ba5;
+}
+.people-display-header-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.person-display-image{
+    width: 13rem;
+    border-radius: 20px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    @include small{
+        width: 15rem;
+    }
+    @include med{
+        width: 18rem;
+    }
+    @include large{
+        width: 22rem;
+    }
+}
+.people-display-header-info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.people-display-header-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.people-display-header-name h1{
+    font-size: 2.5rem;
+    padding-top: 1rem;
+    @include large{
+        font-size: 3rem;
+    }
+    @include x-large{
+        font-size: 3.25rem;
+    }
+}
+.people-display-header-container h3{
+    font-size: 1.5rem;
+    @include large{
+        font-size: 2rem;
+    }
+    @include x-large{
+        font-size: 2.25rem;
+    }
+}
+.people-display-header-container h2{
+    font-size: 2rem;
+    @include small{
+        font-size: 2.25rem;
+    }
+}
+.people-display-header-container p{
+    @include small{
+        font-size: 1rem;
+    }
+    @include med{
+        font-size: 1.25rem;
+    }
+    @include large{
+        font-size: 1.5rem;
+    }
+}
+.people-display-birthday{
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    margin: 1rem 0;
+    @include large{
+        margin: 2rem 0;
+    }
+}
+.people-display-age{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem 0;
+    @include large{
+        margin: 2rem 0;
+    }
+}
+.people-display-birth-place{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem 0;
+    @include large{
+        margin: 2rem 0;
+    }
+}
+.people-display-known-for{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem 0;
+    @include large{
+        margin: 2rem 0;
+    }
+}
+.people-display-bio-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    @include small{
+        margin-top: 0.5rem;
+    }
+}
