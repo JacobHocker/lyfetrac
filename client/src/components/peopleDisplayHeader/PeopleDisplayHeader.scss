@@ -75,9 +75,7 @@
     justify-content: flex-start;
     align-items:center;
     margin: 1rem 0;
-    @include large{
-        margin: 2rem 0;
-    }
+    
 }
 .people-display-age{
     display: flex;
@@ -85,9 +83,7 @@
     justify-content: flex-start;
     align-items: center;
     margin: 1rem 0;
-    @include large{
-        margin: 2rem 0;
-    }
+    
 }
 .people-display-birth-place{
     display: flex;
@@ -95,9 +91,7 @@
     justify-content: flex-start;
     align-items: center;
     margin: 1rem 0;
-    @include large{
-        margin: 2rem 0;
-    }
+    
 }
 .people-display-known-for{
     display: flex;
@@ -105,9 +99,7 @@
     justify-content: flex-start;
     align-items: center;
     margin: 1rem 0;
-    @include large{
-        margin: 2rem 0;
-    }
+    
 }
 .people-display-bio-header{
     display: flex;
@@ -117,5 +109,52 @@
     margin-top: 2rem;
     @include small{
         margin-top: 0.5rem;
+    }
+}
+.people-display-socials-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0.75rem;
+}
+.insta-icon{
+    font-size: 3rem;
+    color: white;
+    margin-right: 0.5rem;
+    @include large{
+        font-size: 5rem;
+    }
+    @include x-large{
+        font-size: 6rem;
+    }
+    &:hover{
+        transform: scale(110%);
+    }
+}
+.imdb-icon{
+    font-size: 3rem;
+    color: white;
+    margin-right: 0.5rem;
+    @include large{
+        font-size: 5rem;
+    }
+    @include x-large{
+        font-size: 6rem;
+    }
+    &:hover{
+        transform: scale(110%);
+    }
+}
+.twitter-icon{
+    font-size: 3rem;
+    color: white;
+    @include large{
+        font-size: 5rem;
+    }
+    @include x-large{
+        font-size: 6rem;
+    }
+    &:hover{
+        transform: scale(110%);
     }
 }

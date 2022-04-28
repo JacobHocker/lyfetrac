@@ -1,9 +1,14 @@
 import React from "react";
 import { Container, Row, Col } from 'react-bootstrap';
+import { AiFillInstagram, AiFillTwitterCircle } from 'react-icons/ai';
+import { FaImdb } from 'react-icons/fa';
 import './PeopleDisplayHeader.scss';
 
-function PeopleDisplayHeader({ person }) {
+function PeopleDisplayHeader({ person, socials }) {
 
+    const instagram = `https://www.instagram.com/${socials.instagram_id}`;
+    const twitter = `https://twitter.com/${socials.twitter_id}`;
+    const imdb = `https://www.imdb.com/name/${socials.imdb_id}`;
 
     function getAge(dateString) {
         let today = new Date();
@@ -29,7 +34,7 @@ function PeopleDisplayHeader({ person }) {
     }
     const age = getAge(person.birthday)
     const ageIfDead = getDeadAge(person.birthday, person.deathday)
-    console.log(person)
+    
     return(
         <div className="people-display-header-container">
             <Container>
@@ -56,6 +61,29 @@ function PeopleDisplayHeader({ person }) {
                                 </div>
                                 <div className="people-display-page-known-for">
                                     <h3>Known For: {person.known_for_department}</h3>
+                                </div>
+                                <div className="people-display-socials-container">
+                                    {socials.instagram_id === null ? <div></div> :
+                                        <div className="people-display-insta">
+                                            <a href={instagram} target="_blank" rel="noopener noreferrer">
+                                                <AiFillInstagram className='insta-icon' />
+                                            </a>
+                                        </div>
+                                    }
+                                    {socials.imdb_id === null ? <div></div> :
+                                        <div className="people-display-imdb">
+                                            <a href={imdb} target="_blank" rel="noopener noreferrer">
+                                                <FaImdb className='imdb-icon' />
+                                            </a>
+                                        </div>
+                                    }
+                                    {socials.twitter_id === null ? <div></div> :
+                                        <div className="people-display-twitter">
+                                            <a href={twitter} target="_blank" rel="noopener noreferrer">
+                                                <AiFillTwitterCircle className='twitter-icon' />
+                                            </a>
+                                        </div>
+                                    }
                                 </div>
                             </div>
                         </div>
