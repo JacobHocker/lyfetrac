@@ -7,7 +7,7 @@ import defaultMovie from '../../assets/images/defaultmovie.jpg';
 
 function PeopleDisplayCrew({ crew }) {
     
-    console.log(crew)
+    
     
     const personCrewMap = crew.map((c) => (
         <div className="person-crew-cards-carousel-item" key={c.id}>

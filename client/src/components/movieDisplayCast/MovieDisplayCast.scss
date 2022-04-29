@@ -22,11 +22,18 @@
     }
     
 }
+.cast-cards-carousel-item a{
+    text-decoration: none;
+    color: white;
+}
 
 .cast-carousel-col{
     background-color: #151625;
     padding: 1rem;
     border-radius: 10px;
+}
+.cast-card-img{
+    background-color: white;
 }
 .cast-card{
     width: 8.5rem;
@@ -34,6 +41,9 @@
     background: #373b69;
     border-radius: 5px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
+    &:hover{
+        transform: scale(110%);
+    }
     @include small{
         width: 10rem;
         height: 26rem;

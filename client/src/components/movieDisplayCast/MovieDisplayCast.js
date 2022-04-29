@@ -2,6 +2,7 @@ import React from "react";
 import './MovieDisplayCast.scss';
 import { Container, Row, Col, Card } from "react-bootstrap";
 import Carousel from 'react-multi-carousel';
+import { Link } from 'react-router-dom';
 import defaultPicture from '../../assets/images/defaultprofile.png';
 
 function MovieDisplayCast({ cast }) {
@@ -9,15 +10,17 @@ function MovieDisplayCast({ cast }) {
     
     const castMap = cast.map((cast) => (
             <div className="cast-cards-carousel-item" key={cast.id}>
-                <Card  className='cast-card'>
-                    <Card.Img variant="top" src={cast.profile_path === null ? defaultPicture :`https://image.tmdb.org/t/p/w185${cast.profile_path}`}  className='cast-card-img'/>
-                    <Card.Body>
-                        <Card.Title className='cast-card-title'>{cast.name}</Card.Title> 
-                    </Card.Body>
-                    <Card.Footer>
-                        <Card.Text className="cast-card-footer">{cast.character}</Card.Text>
-                    </Card.Footer>
-                </Card>
+                <Link to={`/people/${cast.id}`}>
+                    <Card  className='cast-card'>
+                        <Card.Img variant="top" src={cast.profile_path === null ? defaultPicture :`https://image.tmdb.org/t/p/w185${cast.profile_path}`}  className='cast-card-img'/>
+                        <Card.Body>
+                            <Card.Title className='cast-card-title'>{cast.name}</Card.Title> 
+                        </Card.Body>
+                        <Card.Footer>
+                            <Card.Text className="cast-card-footer">{cast.character}</Card.Text>
+                        </Card.Footer>
+                    </Card>
+                </Link>
             </div>
     ))
     const responsive = {

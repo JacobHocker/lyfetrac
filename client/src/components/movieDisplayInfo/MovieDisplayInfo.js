@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import './MovieDisplayInfo.scss';
+import defaultCompany from '../../assets/images/defaultcompany.png';
 
 function MovieDisplayInfo({ movie }) {
     
@@ -29,7 +30,7 @@ function MovieDisplayInfo({ movie }) {
                             <div className="display-production-companies-container">
                                 {movie.production_companies.map((company) => (
                                     <div className="display-production-company" key={company.id}>
-                                        {company.logo === null ? <div></div> : <img src={`https://image.tmdb.org/t/p/w185${company.logo_path}`} alt={company.name} className='display-company-logo' />}
+                                        <img src={company.logo_path === null ? defaultCompany : `https://image.tmdb.org/t/p/w185${company.logo_path}`} alt={company.name} className='display-company-logo' />
                                         <p>{company.name}</p>
                                     </div>
                                 ))}

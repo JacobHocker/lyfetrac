@@ -2,21 +2,24 @@ import React from "react";
 import './MovieDisplayCrew.scss';
 import { Container, Row, Col, Card } from "react-bootstrap";
 import Carousel from 'react-multi-carousel';
+import { Link } from 'react-router-dom';
 import defaultPicture from '../../assets/images/defaultprofile.png';
 
 function MovieDisplayCrew( { crew }) {
     
     const crewMap = crew.map((crew) => (
         <div className="crew-cards-carousel-item" key={crew.id}>
-            <Card  className='crew-card'>
-                <Card.Img variant="top" src={crew.profile_path === null ? defaultPicture :`https://image.tmdb.org/t/p/w185${crew.profile_path}`}  className='crew-card-img'/>
-                <Card.Body>
-                    <Card.Title className='crew-card-title'>{crew.name}</Card.Title> 
-                </Card.Body>
-                <Card.Footer>
-                    <Card.Text className="crew-card-footer">{crew.job}</Card.Text>
-                </Card.Footer>
-            </Card>
+            <Link to={`/people/${crew.id}`}>
+                <Card  className='crew-card'>
+                    <Card.Img variant="top" src={crew.profile_path === null ? defaultPicture :`https://image.tmdb.org/t/p/w185${crew.profile_path}`}  className='crew-card-img'/>
+                    <Card.Body>
+                        <Card.Title className='crew-card-title'>{crew.name}</Card.Title> 
+                    </Card.Body>
+                    <Card.Footer>
+                        <Card.Text className="crew-card-footer">{crew.job}</Card.Text>
+                    </Card.Footer>
+                </Card>
+            </Link>
         </div>
     ))
 

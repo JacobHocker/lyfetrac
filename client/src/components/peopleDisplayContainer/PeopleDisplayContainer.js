@@ -4,6 +4,7 @@ import PeopleDisplayHeader from "../peopleDisplayHeader/PeopleDisplayHeader";
 import PeopleDisplayCast from "../peopleDisplayCast/PeopleDisplayCast";
 import PeopleDisplayCrew from "../peopleDisplayCrew/PeopleDisplayCrew";
 import './PeopleDisplayContainer.scss';
+import PeopleDisplayImage from "../peopleDisplayImages/PeopleDisplayImage";
 
 function PeopleDisplayContainer() {
     const [person, setPerson] = useState({})
@@ -42,6 +43,7 @@ function PeopleDisplayContainer() {
         <div className="people-section-display-container">
             {person.name && <PeopleDisplayHeader person={person} socials={personSocials} />}
             {personCredits.cast && <PeopleDisplayCast movies={personCredits.cast} />}
+            {personImages.profiles && <PeopleDisplayImage images={personImages.profiles} />}
             {personCredits.crew && <PeopleDisplayCrew crew={personCredits.crew} />}
         </div>
     );
