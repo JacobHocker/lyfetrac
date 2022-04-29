@@ -11,8 +11,9 @@
 .person-display-image{
     width: 13rem;
     border-radius: 20px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
     @include small{
         width: 15rem;
     }

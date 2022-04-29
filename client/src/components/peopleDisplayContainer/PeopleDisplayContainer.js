@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PeopleDisplayHeader from "../peopleDisplayHeader/PeopleDisplayHeader";
+import PeopleDisplayCast from "../peopleDisplayCast/PeopleDisplayCast";
+import PeopleDisplayCrew from "../peopleDisplayCrew/PeopleDisplayCrew";
 import './PeopleDisplayContainer.scss';
 
 function PeopleDisplayContainer() {
@@ -35,9 +37,12 @@ function PeopleDisplayContainer() {
     },[id])
 
     
+    
     return(
         <div className="people-section-display-container">
             {person.name && <PeopleDisplayHeader person={person} socials={personSocials} />}
+            {personCredits.cast && <PeopleDisplayCast movies={personCredits.cast} />}
+            {personCredits.crew && <PeopleDisplayCrew crew={personCredits.crew} />}
         </div>
     );
 }
