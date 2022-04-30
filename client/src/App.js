@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route} from 'react-router-dom';
+import CollectionDisplayContainer from './components/collectionDisplayContainer/CollectionDisplayContainer';
 import Home from './components/home/Home';
 import MovieDisplayContainer from './components/movieDisplayContainer/MovieDisplayContainer';
 import MoviesContainer from './components/moviesContainer/MoviesContainer';
@@ -19,6 +20,7 @@ function App() {
         <Route path='movies/search' element={<MovieSearchContainer />} />
         <Route path='/people' element={<PeopleContainer />} />
         <Route path='/people/:id' element={<PeopleDisplayContainer />} />
+        <Route path='/collection/:id' element={<CollectionDisplayContainer />} />
       </Routes>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './MovieDisplayCollection.scss';
 
 function MovieDisplayCollection({ collection }) {
@@ -25,9 +26,11 @@ function MovieDisplayCollection({ collection }) {
                 </Row>
                 <Row>
                     <Col>
-                        <div className='movie-display-collection-poster-container'>
-                            <img src={`https://image.tmdb.org/t/p/w300${collection.poster_path}`} alt={collection.name} className="movie-display-collection-poster" />
-                        </div>
+                        <Link to={`/collection/${collection.id}`}>
+                            <div className='movie-display-collection-poster-container'>
+                                <img src={`https://image.tmdb.org/t/p/w300${collection.poster_path}`} alt={collection.name} className="movie-display-collection-poster" />
+                            </div>
+                        </Link>
                     </Col>
                 </Row>
             </Container>

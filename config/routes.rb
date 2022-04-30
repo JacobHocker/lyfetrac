@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   get '/person-socials/:person_id/:api_key', to: "persons#get_person_socials"
   get '/person-search/:api_key/:search_term', to: "persons#get_person_search"
   
+  # ! MOVIE COLLECTIONS
+  get '/single-collection/:collection_id/:api_key', to: "collections#get_collection"
   
   resources :users
   # Routing logic: fallback requests for React Router.

@@ -20,6 +20,9 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
+    &:hover{
+        transform: scale(120%);
+    }
 }
 .movie-display-collection-poster{
     padding: 1rem;
