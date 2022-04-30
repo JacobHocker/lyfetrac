@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { AiOutlineUnorderedList, AiOutlineStar } from "react-icons/ai";
 import { BsFillPlayFill } from "react-icons/bs";
+import defaultMovie from '../../assets/images/defaultmovie.jpg';
 import './MovieDisplayHeader.scss';
 
 function MovieDisplayHeader({ movie }) {
@@ -42,7 +43,7 @@ function MovieDisplayHeader({ movie }) {
                     <Row>
                         <Col>
                             <div className="movie-poster-display-container">
-                                <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} className="movie-display-poster" />
+                                <img src={movie.poster_path === null ? defaultMovie : `https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} className="movie-display-poster" />
                             </div>
                         </Col>
                         <Col>
