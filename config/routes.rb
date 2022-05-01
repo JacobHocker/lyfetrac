@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get '/tv-top-rated/:api_key/:page_number', to: "televisions#get_television_top_rated"
   get '/tv-popular/:api_key/:page_number', to: "televisions#get_television_popular"
   get '/tv-ota/:api_key/:page_number', to: "televisions#get_television_ota"
-  get '/tv-reviews/:api_key/:page_number', to: "televisions#get_television_reviews"
+  get '/tv-reviews/:tv_id/:api_key', to: "televisions#get_television_reviews"
 
 
 
