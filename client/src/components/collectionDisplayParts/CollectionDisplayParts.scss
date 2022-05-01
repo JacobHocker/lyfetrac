@@ -1,0 +1,59 @@
+@import '../../assets/partials/breakpoints';
+
+.collection-display-parts-container{
+    margin-top: 2rem;
+}
+.collection-display-parts-title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.collection-display-parts-title h1{
+    font-size: 2rem;
+    @include med{
+        font-size: 2.5rem;
+    }
+    
+}
+.part-cards-carousel-item a{
+    text-decoration: none;
+    color: white;
+}
+.part-carousel-col{
+    background-color: #151625;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.part-card-img{
+    background-color: white;
+}
+.part-card{
+    width: 8.5rem;
+    height: 24rem;
+    background: #373b69;
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
+    &:hover{
+        transform: scale(110%);
+    }
+    @include small{
+        width: 10rem;
+        height: 26rem;
+    }
+    @include med{
+        width: 11rem;
+        height: 27rem;
+    }
+    @include large{
+        width: 12.5rem;
+        height: 29rem;
+    }
+    @include x-large{
+        width: 13.5rem;
+        height: 32rem;
+    }
+    @include xx-large{
+        width: 14rem;
+        height: 33rem;
+    }
+}

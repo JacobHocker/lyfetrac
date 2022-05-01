@@ -1,0 +1,83 @@
+@import '../../assets/partials/breakpoints';
+
+.collection-display-header-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.collection-display-header-title-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.collection-display-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.collection-display-title h1{
+    @include large{
+        font-size: 3rem;
+    }
+    @include x-large{
+        font-size: 3.25rem;
+    }
+}
+.collection-display-poster{
+    padding: 1rem;
+    border-radius: 20px;
+    width: 17rem;
+    @include small {
+        width: 20rem;
+    }
+    @include med{
+        width: 22rem;
+    }
+    @include large{
+        width: 24rem;
+    }
+    @include x-large{
+        width: 26rem;
+    }
+    @include xx-large{
+        width: 28rem;
+    }
+}
+.collection-display-poster-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+.collection-display-overview-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+.collection-display-overview-title{
+    display: flex;
+    justify-content: center;
+}
+.collection-display-overview-title h3{
+    @include large{
+        font-size: 2.5rem;
+    }
+    @include x-large{
+        font-size: 3rem;
+    }
+}
+.collection-display-overview-content{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.collection-display-overview-content p{
+    @include large{
+        font-size: 1.5rem;
+    }
+}

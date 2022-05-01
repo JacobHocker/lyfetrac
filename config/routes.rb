@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   
   # ! MOVIE COLLECTIONS
   get '/single-collection/:collection_id/:api_key', to: "collections#get_collection"
-  
+  get '/collection-search/:api_key/:search_term', to: "collections#get_collection_search"
   resources :users
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!

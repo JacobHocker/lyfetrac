@@ -7,4 +7,10 @@ class CollectionsController < ApplicationController
         response = HTTParty.get(url)
         render json: response
     end
+    # ! SEARCH COLLECTIONS = SEARCH TERM & API KEY
+    def get_collection_search
+        url = "https://api.themoviedb.org/3/search/collection?api_key=#{params[:api_key]}&language=en-US&query=#{params[:search_term]}&page=1"
+        response = HTTParty.get(url)
+        render json: response
+    end
 end

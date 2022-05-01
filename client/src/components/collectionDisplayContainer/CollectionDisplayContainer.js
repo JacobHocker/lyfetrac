@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import CollectionDisplayHeader from '../collectionDisplayHeader/CollectionDisplayHeader';
+import CollectionDisplayParts from '../collectionDisplayParts/CollectionDisplayParts';
 import './CollectionDisplayContainer.scss';
 
 function CollectionDisplayContainer() {
@@ -14,10 +16,11 @@ function CollectionDisplayContainer() {
         .then((collection) => setCollection(collection))
     },[id])
     
-    console.log(collection)
+    
     return(
         <div className='collection-display-container'>
-            <h1>Collection</h1>
+            {collection.id && <CollectionDisplayHeader collection={collection} />}
+            {collection.parts && <CollectionDisplayParts parts={collection.parts} name={collection.name}/>}
         </div>
     );
 }
