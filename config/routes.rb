@@ -12,6 +12,18 @@ Rails.application.routes.draw do
   get '/reviews/:movie_id/:api_key/:page_number', to: "movies#get_movie_reviews"
   get '/similar/:movie_id/:api_key/:page_number', to: "movies#get_similar_movies"
   
+  # ! TELEVISION
+  get '/single-tv/:tv_id/:api_key', to: "televisions#get_television_single"
+  get '/tv-credits/:tv_id/:api_key', to: "televisions#get_television_credit"
+  get '/tv-recommendations/:tv_id/:api_key', to: "televisions#get_television_recommendations"
+  get '/tv-top-rated/:api_key/:page_number', to: "televisions#get_television_top_rated"
+  get '/tv-popular/:api_key/:page_number', to: "televisions#get_television_popular"
+  get '/tv-ota/:api_key/:page_number', to: "televisions#get_television_ota"
+  get '/tv-reviews/:api_key/:page_number', to: "televisions#get_television_reviews"
+
+
+
+
   # ! PEOPLE
   get '/popular-people/:api_key/:page_number', to: "persons#get_popular_people"
   get '/single-person/:person_id/:api_key', to: "persons#get_person_details"

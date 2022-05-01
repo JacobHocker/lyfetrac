@@ -8,6 +8,8 @@ import MovieSearchContainer from './components/movieSearchContainer/MovieSearchC
 import NavBar from './components/nav/NavBar';
 import PeopleContainer from './components/peopleContainer/PeopleContainer';
 import PeopleDisplayContainer from './components/peopleDisplayContainer/PeopleDisplayContainer';
+import TelevisionContainer from './components/televisionContainer/TelevisionContainer';
+import TelevisionDisplayContainer from './components/televisionDisplayContainer/TelevisionDisplayContainer';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path='/people' element={<PeopleContainer />} />
         <Route path='/people/:id' element={<PeopleDisplayContainer />} />
         <Route path='/collection/:id' element={<CollectionDisplayContainer />} />
+        <Route path='/tv' element={<TelevisionContainer />} />
+        <Route path='/tv/:id' element={<TelevisionDisplayContainer />} />
       </Routes>
     </div>
   );
