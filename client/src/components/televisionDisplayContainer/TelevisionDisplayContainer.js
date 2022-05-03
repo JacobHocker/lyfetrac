@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import TelevisionDisplayCast from '../televisionDisplayCast/TelevisionDisplayCast';
+import TelevisionDisplayCrew from '../televisionDisplayCrew/TelevisionDisplayCrew';
 import TelevisionDisplayHeader from '../televisionDisplayHeader/TelevisionDisplayHeader';
 import './TelevisionDisplayContainer.scss';
 
 function TelevisionDisplayContainer() {
     const [tvShow, setTvShow] = useState({});
+    const [tvCredits, setTvCredits] = useState([]);
 
 
     const apiKey = '4a571a843827a09096250c11596c470d';
@@ -17,11 +20,20 @@ function TelevisionDisplayContainer() {
         .then((tvShow) => { setTvShow(tvShow);
         });
     }, [id]);
+    //TV SHOW CREDITS
+    useEffect(() => {
+        fetch(`/tv-credits/${id}/${apiKey}`)
+        .then((r) => r.json())
+        .then((tvCredits) => { setTvCredits(tvCredits);
+        });
+    }, [id]);
 
     
     return(
         <div className='tv-display-container'>
             {tvShow.id && <TelevisionDisplayHeader tvShow={tvShow} />}
+            {tvCredits.cast && <TelevisionDisplayCast cast={tvCredits.cast} />}
+            {tvCredits.crew && <TelevisionDisplayCrew crew={tvCredits.crew} />}
         </div>
     );
 }

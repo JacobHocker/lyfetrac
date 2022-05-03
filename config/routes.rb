@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   
   # ! TELEVISION
   get '/single-tv/:tv_id/:api_key', to: "televisions#get_television_single"
-  get '/tv-credits/:tv_id/:api_key', to: "televisions#get_television_credit"
+  get '/tv-credits/:tv_id/:api_key', to: "televisions#get_television_credits"
   get '/tv-recommendations/:tv_id/:api_key', to: "televisions#get_television_recommendations"
   get '/tv-top-rated/:api_key/:page_number', to: "televisions#get_television_top_rated"
   get '/tv-popular/:api_key/:page_number', to: "televisions#get_television_popular"

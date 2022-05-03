@@ -23,7 +23,7 @@ function TelevisionDisplayHeader({ tvShow }) {
         }
     }
 
-    console.log(tvShow)
+    
     return(
         <div className='tv-display-header-container'>
             <Container>
