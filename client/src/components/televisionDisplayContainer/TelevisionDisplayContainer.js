@@ -9,7 +9,7 @@ function TelevisionDisplayContainer() {
 
     const apiKey = '4a571a843827a09096250c11596c470d';
     const {id} = useParams()
-    const pageNumber = 1
+    
     //TV SHOW
     useEffect(() => {
         fetch(`/single-tv/${id}/${apiKey}`)

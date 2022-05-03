@@ -77,9 +77,6 @@ function MovieDisplayHeader({ movie }) {
                                     <h4><em>{movie.tagline}</em></h4>
                                 </div>
                                 <div className="movie-summary-container">
-                                    <div className="movie-summary-header">
-                                        <h3>Summary</h3>
-                                    </div>
                                     <div className="movie-summary-body">
                                         <p>{movie.overview}</p>
                                     </div>

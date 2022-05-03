@@ -38,3 +38,74 @@
         font-size: 3.25rem;
     }
 }
+.tv-display-title-container p{
+    @include large{
+        font-size: 1.5rem;
+    }
+}
+.tv-title-info-container{
+    @include med{
+        display: flex;
+        justify-content: flex-start;
+    }
+    @include large{
+        font-size: 1.2rem;
+    }
+}
+.tv-display-interact-container{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.tv-display-rating{
+    background-color: rgba(0, 0, 0, 0.473);
+    font-size: 1.5rem;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5rem;
+
+}
+.tv-display-rating p{
+    margin-top: 1rem;
+}
+.tv-display-favorite{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5rem;
+}
+.tv-display-add-favorite{
+    font-size: 2rem;
+    color: yellow;
+}
+.tv-display-to-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5rem;
+}
+.tv-display-add-list{
+    font-size: 2rem;
+    color: rgb(47, 255, 92);
+}
+.tv-display-trailer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tv-display-play-button{
+    font-size: 2.5rem;
+    color: red;
+}
+
+.tv-tagline-display{
+    margin-bottom: 1rem;
+}
+.tv-display-genres{
+    display: flex;
+    flex-wrap: wrap;
+}
