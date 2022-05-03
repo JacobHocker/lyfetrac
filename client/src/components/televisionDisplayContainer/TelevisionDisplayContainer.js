@@ -6,6 +6,7 @@ import TelevisionDisplayHeader from '../televisionDisplayHeader/TelevisionDispla
 import TelevisionDisplayInfo from '../televisionDisplayInfo/TelevisionDisplayInfo';
 import TelevisionDisplayRecommendation from '../televisionDisplayRecommendation/TelevisionDisplayRecommendation';
 import TelevisionDisplayReviewContainer from '../televisionDisplayReviewContainer/TelevisionDisplayReviewContainer';
+import TelevisionDisplaySeason from '../televisionDisplaySeason/TelevisionDisplaySeaon';
 import './TelevisionDisplayContainer.scss';
 
 function TelevisionDisplayContainer() {
@@ -13,6 +14,7 @@ function TelevisionDisplayContainer() {
     const [tvCredits, setTvCredits] = useState([]);
     const [tvRecommend, setTvRecommend] = useState([]);
     const [tvReviews, setTvReviews] = useState([]);
+    
 
 
     const apiKey = '4a571a843827a09096250c11596c470d';
@@ -54,6 +56,7 @@ function TelevisionDisplayContainer() {
             {tvShow.id && <TelevisionDisplayHeader tvShow={tvShow} />}
             {tvCredits.cast && <TelevisionDisplayCast cast={tvCredits.cast} />}
             {tvShow.id && <TelevisionDisplayInfo tvShow={tvShow} />}
+            {tvShow.seasons && <TelevisionDisplaySeason show={tvShow} />}
             {tvReviews.results && <TelevisionDisplayReviewContainer reviews={tvReviews.results} />}
             {tvCredits.crew && <TelevisionDisplayCrew crew={tvCredits.crew} />}
             {tvRecommend.results && <TelevisionDisplayRecommendation shows={tvRecommend.results} />}
