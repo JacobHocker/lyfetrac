@@ -1,0 +1,15 @@
+@import '../../assets/partials/breakpoints';
+
+.tv-review-card{
+    background-color: #434986;
+    box-shadow: 0 4px 5px rgba(77, 77, 77, 0.6);
+    margin: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.42);
+}
+.tv-review-card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+    border-bottom: 1px solid white;
+}
