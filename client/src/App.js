@@ -28,7 +28,7 @@ function App() {
         <Route path='/tv' element={<TelevisionContainer />} />
         <Route path='/tv/:id' element={<TelevisionDisplayContainer />} />
         <Route path='/tv/:id/seasons' element={<SeasonsContainer />} />
-        <Route path='/tv/:id/season/:seasonId' element={<SeasonsDisplayContainer />} />
+        <Route path='/tv/:tvId/season/:seasonNumber' element={<SeasonsDisplayContainer />} />
       </Routes>
     </div>
   );

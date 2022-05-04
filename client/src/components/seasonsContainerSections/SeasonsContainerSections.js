@@ -7,8 +7,7 @@ import './SeasonsContainerSections.scss';
 
 function SeasonsContainerSections({ seasons, id }) {
     
-    console.log(seasons)
-
+    
     const seasonSectionMap = seasons.map((season) => (
         <Row key={season.id} className='season-section-row'>
             <Col>
@@ -31,7 +30,7 @@ function SeasonsContainerSections({ seasons, id }) {
             </Col>
             <Col>    
                 <div className="season-section-season-link">
-                    <Link to={`/tv/${id}/season/${season.id}`}>
+                    <Link to={`/tv/${id}/season/${season.season_number}`}>
                         <button className="season-section-link-button">See {season.name}</button>
                     </Link>
                 </div>
