@@ -1,0 +1,74 @@
+@import '../../assets/partials/breakpoints';
+
+.tv-season-poster-display-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tv-season-display-poster{
+    padding: 1rem;
+    border-radius: 20px;
+    width: 17rem;
+    @include small {
+        width: 20rem;
+    }
+    @include med{
+        width: 22rem;
+    }
+    @include large{
+        width: 24rem;
+    }
+    @include x-large{
+        width: 26rem;
+    }
+    @include xx-large{
+        width: 28rem;
+    }
+}
+.tv-display-season-link-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tv-display-season-link-header{
+    margin: 1rem 0;
+}
+.season-link-p{
+    margin-top: 3rem;
+}
+.tv-display-season-link-header h1{
+    font-size: 2.75rem;
+    @include large{
+        font-size: 3rem;
+    }
+    @include x-large{
+        font-size: 3.25rem;
+    }
+}
+.tv-display-season-link-header p{
+    font-size: 1.5rem;
+    @include large{
+        font-size: 1.75rem;
+    }
+    @include x-large{
+        font-size: 2rem;
+    }
+}
+.tv-display-season-link{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.season-link-button{
+    font-size: 1.5rem;
+    padding: 0.15rem 3rem;
+    border-radius: 15px;
+    background-color: #22254b;
+    color: white;
+    &:hover{
+        box-shadow: inset 0 0 0.5px 1px rgba(255, 255, 255, 0.85);
+    }
+}
