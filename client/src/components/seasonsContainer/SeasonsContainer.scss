@@ -1,0 +1,23 @@
+@import '../../assets/partials/breakpoints';
+
+.seasons-container{
+    margin-top: 3rem;
+}
+.seasons-container-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+}
+.seasons-container-title h1{
+    font-size: 2.25rem;
+    @include med{
+        font-size: 2.5rem;
+    }
+    @include large{
+        font-size: 2.75rem;
+    }
+    @include x-large{
+        font-size: 3rem;
+    }
+}

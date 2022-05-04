@@ -1,0 +1,97 @@
+@import '../../assets/partials/breakpoints';
+
+.season-section-row{
+    margin: 2rem 0;
+}
+.season-section-poster-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.season-section-poster-container h1{
+    font-size: 1.75rem;
+    @include small{
+        font-size: 1.85rem;
+    }
+    @include med{
+        font-size: 1.95rem;
+    }
+    @include large{
+        font-size: 2.05rem;
+    }
+}
+.season-section-poster{
+    width: 7rem;
+    border-radius: 5px;
+    padding: 0.5rem 0;
+    @include small{
+        width: 7.5rem;
+    }
+    @include med{
+        width: 8rem;
+    }
+    @include large{
+        width: 9rem;
+    }
+}
+.season-section-season-name{
+    margin-left: 1rem;
+}
+.season-section-row{
+    background-color: rgba(52, 74, 120, 0.615);
+    border-radius: 15px;
+}
+
+.season-section-name-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    @include small{
+        margin-top: 4.25rem;
+    }
+    @include med{
+        margin-top: 4.25rem;
+        justify-content: space-evenly;
+    }
+}
+.season-section-name-container h4{
+    font-size: 1rem;
+    @include small{
+        font-size: 1.10rem;
+    }
+    @include med{
+        font-size: 1.5rem;
+    }
+}
+.season-section-season-aired{
+    margin: 0 1rem;
+    @include med{
+        margin: 0 0.5rem;
+    }
+}
+.season-section-season-episodes{
+    margin: 0 1rem;
+    @include med{
+        margin: 0 0.5rem;
+    }
+}
+.season-section-season-link{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include med{
+        margin-top: 4.25rem;
+    }
+}
+.season-section-link-button{
+    padding: 0.15rem 3rem;
+    font-size: 1.25rem;
+    border-radius: 15px;
+    background-color: #22254b;
+    color: white;
+    &:hover{
+        box-shadow: inset 0 0 0.5px 1px rgba(255, 255, 255, 0.85);
+    }
+}
