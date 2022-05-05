@@ -48,6 +48,17 @@ class TelevisionsController < ApplicationController
         response = HTTParty.get(url)
         render json: response
     end
+    # ! TV TRENDING = API KEY
+    def get_tv_trending_day
+        url = "https://api.themoviedb.org/3/trending/tv/day?api_key=#{params[:api_key]}"
+        response = HTTParty.get(url)
+        render json: response
+    end
+    def get_tv_trending_week
+        url = "https://api.themoviedb.org/3/trending/tv/week?api_key=#{params[:api_key]}"
+        response = HTTParty.get(url)
+        render json: response
+    end
     
     
     

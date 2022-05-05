@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  # ! HOME PAGE 
+  get '/movie-trending-day/:api_key', to: "movies#get_movie_trending_day"
+  get '/movie-trending-week/:api_key', to: "movies#get_movie_trending_week"
+  get '/tv-trending-day/:api_key', to: "televisions#get_tv_trending_day"
+  get '/tv-trending-week/:api_key', to: "televisions#get_tv_trending_week"
+  get '/people-trending-day/:api_key', to: "persons#get_person_trending_day"
+  get '/people-trending-week/:api_key', to: "persons#get_person_trending_week"
+  
   
   # ! MOVIES
   get '/single/:movie_id/:api_key', to: "movies#get_single_movie"

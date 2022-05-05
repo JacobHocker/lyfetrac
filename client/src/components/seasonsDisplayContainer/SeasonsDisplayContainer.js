@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
+import SeasonDisplayHeader from "../seasonsDisplayHeader/SeasonDisplayHeader";
 import './SeasonsDisplayContainer.scss';
 
 function SeasonsDisplayContainer() {
@@ -17,11 +18,11 @@ function SeasonsDisplayContainer() {
         });
     }, [tvId, seasonNumber]);
 
-    console.log(season)
+    
 
     return(
         <div className="seasons-display-container">
-
+            {season.id && <SeasonDisplayHeader season={season} />}
         </div>
     );
 }
