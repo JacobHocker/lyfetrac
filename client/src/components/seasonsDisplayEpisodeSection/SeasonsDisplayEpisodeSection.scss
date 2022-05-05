@@ -1,0 +1,29 @@
+@import '../../assets/partials/breakpoints';
+
+.episode-section-poster{
+    width: 7rem;
+    border-radius: 10px;
+    padding: 0.5rem 0;
+    @include small{
+        width: 7.5rem;
+    }
+    @include med{
+        width: 8rem;
+    }
+    @include large{
+        width: 9rem;
+    }
+}
+.episode-section-season-link{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.episode-section-name-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}

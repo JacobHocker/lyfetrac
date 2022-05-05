@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
+import SeasonsDisplayEpisodeSection from "../seasonsDisplayEpisodeSection/SeasonsDisplayEpisodeSection";
 import SeasonDisplayHeader from "../seasonsDisplayHeader/SeasonDisplayHeader";
 import './SeasonsDisplayContainer.scss';
 
@@ -23,6 +24,7 @@ function SeasonsDisplayContainer() {
     return(
         <div className="seasons-display-container">
             {season.id && <SeasonDisplayHeader season={season} />}
+            {season.episodes && <SeasonsDisplayEpisodeSection episodes={season.episodes} />}
         </div>
     );
 }

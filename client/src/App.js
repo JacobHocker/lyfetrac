@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route} from 'react-router-dom';
 import CollectionDisplayContainer from './components/collectionDisplayContainer/CollectionDisplayContainer';
+import EpisodeDisplayContainer from './components/episodeDisplayContainer/EpisodeDisplayContainer';
 import Home from './components/home/Home';
 import MovieDisplayContainer from './components/movieDisplayContainer/MovieDisplayContainer';
 import MoviesContainer from './components/moviesContainer/MoviesContainer';
@@ -29,6 +30,7 @@ function App() {
         <Route path='/tv/:id' element={<TelevisionDisplayContainer />} />
         <Route path='/tv/:id/seasons' element={<SeasonsContainer />} />
         <Route path='/tv/:tvId/season/:seasonNumber' element={<SeasonsDisplayContainer />} />
+        <Route path='/tv/:tvId/season/:seasonNumber/episode/:episodeNumber' element={<EpisodeDisplayContainer />} />
       </Routes>
     </div>
   );

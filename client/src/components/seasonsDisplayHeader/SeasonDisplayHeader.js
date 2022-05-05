@@ -5,7 +5,7 @@ import defaultMovie from '../../assets/images/defaultmovie.jpg';
 
 function SeasonDisplayHeader({ season }) {
 
-    console.log(season)
+    
     return(
         <div className="season-display-header-container">
             <Container>

@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   get '/tv-ota/:api_key/:page_number', to: "televisions#get_television_ota"
   get '/tv-reviews/:tv_id/:api_key', to: "televisions#get_television_reviews"
   get '/tv-season/:tv_id/:season_number/:api_key', to: "televisions#get_television_season"
-
+  get '/tv-episode/:tv_id/:season_number/:episode_number/:api_key', to: "televisions#get_tv_episode"
 
 
 

@@ -59,6 +59,12 @@ class TelevisionsController < ApplicationController
         response = HTTParty.get(url)
         render json: response
     end
+    # ! TV EPISODE = TV ID & SEASON # & EPISODE # & API KEY
+    def get_tv_episode 
+        url = "https://api.themoviedb.org/3/tv/#{params[:tv_id]}/season/#{params[:season_number]}/episode/#{params[:episode_number]}?api_key=#{params[:api_key]}"
+        response = HTTParty.get(url)
+        render json: response
+    end
     
     
     
