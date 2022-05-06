@@ -1,0 +1,33 @@
+@import '../../assets/partials/breakpoints';
+
+.episode-display-image-container{
+    margin: 3rem 0;
+    background-color: #555ba5;
+}
+.episode-image-display-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.episode-image-display-header h1{
+    font-size: 2.5rem;
+    @include large{
+        font-size: 2.75rem;
+    }
+    @include x-large{
+        font-size: 3rem;
+    }
+}
+.episode-display-image-item{
+    width: 12rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
+    @include small{
+        width: 14rem;
+    }
+    @include large{
+        width: 26rem;
+    }
+}
