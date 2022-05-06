@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get '/tv-reviews/:tv_id/:api_key', to: "televisions#get_television_reviews"
   get '/tv-season/:tv_id/:season_number/:api_key', to: "televisions#get_television_season"
   get '/tv-episode/:tv_id/:season_number/:episode_number/:api_key', to: "televisions#get_tv_episode"
+  get '/tv-episode-credits/:tv_id/:season_number/:episode_number/:api_key', to: "televisions#get_tv_episode_credits"
 
 
 

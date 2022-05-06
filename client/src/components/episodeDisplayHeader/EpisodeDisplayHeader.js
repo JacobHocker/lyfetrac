@@ -20,7 +20,7 @@ function EpisodeDisplayHeader({ episode }) {
             return <p className="display-great-rated">{ratingPercentage}%</p>
         }
     }
-    console.log(episode)
+    
     return(
         <div className="episode-display-header-container">
             <Container>
