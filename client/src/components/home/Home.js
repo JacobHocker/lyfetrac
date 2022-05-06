@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import largeLogo from '../../assets/images/ec-logo-transparent.png';
 import './Home.scss';
 
+
 function Home(){
     
     return(
@@ -10,7 +11,7 @@ function Home(){
             <Container>
                 <Row>
                     <Col>
-                        <div className='home-logo-container'>
+                        <div className='home-logo-container' >
                             <img src={largeLogo} alt='logo' className='large-logo' />
                         </div>
                     </Col>

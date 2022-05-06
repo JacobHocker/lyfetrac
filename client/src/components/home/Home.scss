@@ -3,7 +3,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2015/12/12/859165/786c3dbc95c87135e16451d2013cb6c5.jpg");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    box-shadow: inset 0 0 0 1000px rgba(36, 51, 81, 0.9);
 }
 .large-logo{
-    width: 16rem;
+    width: 20rem;
 }
