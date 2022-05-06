@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import EpisodeDisplayHeader from '../episodeDisplayHeader/EpisodeDisplayHeader';
 import './EpisodeDisplayContainer.scss';
 
 function EpisodeDisplayContainer() {
@@ -18,10 +19,10 @@ function EpisodeDisplayContainer() {
         });
     }, [tvId, seasonNumber, episodeNumber]);
 
-    console.log(episode)
+    
     return(
         <div className='episode-display-container'>
-
+            {episode.id && <EpisodeDisplayHeader episode={episode} />}
         </div>
     );
 }
