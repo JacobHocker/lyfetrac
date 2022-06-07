@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import largeLogo from '../../assets/images/ec-logo-transparent.png';
+import largeLogo from '../../assets/images/ec-new-large.png';
 import './Home.scss';
 
 
