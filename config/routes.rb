@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   get '/tv-episode/:tv_id/:season_number/:episode_number/:api_key', to: "televisions#get_tv_episode"
   get '/tv-episode-credits/:tv_id/:season_number/:episode_number/:api_key', to: "televisions#get_tv_episode_credits"
   get '/tv-episode-images/:tv_id/:season_number/:episode_number/:api_key', to: "televisions#get_tv_episode_images"
-
+  get '/tv-search/:api_key/:search_term', to: "televisions#get_tv_search"
 
   # ! PEOPLE
   get '/popular-people/:api_key/:page_number', to: "persons#get_popular_people"

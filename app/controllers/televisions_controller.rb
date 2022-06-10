@@ -77,6 +77,12 @@ class TelevisionsController < ApplicationController
         response = HTTParty.get(url)
         render json: response
     end
+    # ! SEARCH TV PARAMS = SEARCH TERM & API KEY
+    def get_tv_search
+        url = "https://api.themoviedb.org/3/search/tv?api_key=#{params[:api_key]}&language=en-US&query=#{params[:search_term]}&page=1"
+        response = HTTParty.get(url)
+        render json: response
+    end
     
     
     
