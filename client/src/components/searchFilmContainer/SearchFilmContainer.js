@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from 'react-bootstrap';
-import './MovieSearchContainer.scss';
+import './SearchFilmContainer.scss';
 
-function MovieSearchContainer() {
+function SearchFilmContainer() {
     const [searchTerm, setSearchTerm] = useState("");
     const [searchResults, setSearchResults] = useState([]);
     
@@ -18,21 +18,21 @@ function MovieSearchContainer() {
     
     console.log(searchResults)
     return(
-        <div className="movie-search-container">
+        <div className="search-film-container">
             <Container>
                 <Row>
                     <Col>
-                        <div className="move-search-header">
-                            <h1>Search TV & Film</h1>
+                        <div className="search-film-header">
+                            <h1>Search Film, Tv, & People</h1>
                         </div>
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        <div className="movie-search-form-container">
+                        <div className="search-film-form-container">
                             <form onSubmit={handleSubmit}>
                                 <input 
-                                    className="movie-search-bar"
+                                    className="search-film-bar"
                                     type='text'
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
@@ -47,4 +47,4 @@ function MovieSearchContainer() {
     );
 }
 
-export default MovieSearchContainer;
+export default SearchFilmContainer;

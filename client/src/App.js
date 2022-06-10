@@ -5,10 +5,10 @@ import EpisodeDisplayContainer from './components/episodeDisplayContainer/Episod
 import Home from './components/home/Home';
 import MovieDisplayContainer from './components/movieDisplayContainer/MovieDisplayContainer';
 import MoviesContainer from './components/moviesContainer/MoviesContainer';
-import MovieSearchContainer from './components/movieSearchContainer/MovieSearchContainer';
 import NavBar from './components/nav/NavBar';
 import PeopleContainer from './components/peopleContainer/PeopleContainer';
 import PeopleDisplayContainer from './components/peopleDisplayContainer/PeopleDisplayContainer';
+import SearchFilmContainer from './components/searchFilmContainer/SearchFilmContainer';
 import SeasonsContainer from './components/seasonsContainer/SeasonsContainer';
 import SeasonsDisplayContainer from './components/seasonsDisplayContainer/SeasonsDisplayContainer';
 import TelevisionContainer from './components/televisionContainer/TelevisionContainer';
@@ -22,7 +22,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='movies' element={<MoviesContainer />} />
         <Route path='movies/:id' element={<MovieDisplayContainer />} />
-        <Route path='movies/search' element={<MovieSearchContainer />} />
+        <Route path='film/search' element={<SearchFilmContainer />} />
         <Route path='/people' element={<PeopleContainer />} />
         <Route path='/people/:id' element={<PeopleDisplayContainer />} />
         <Route path='/collection/:id' element={<CollectionDisplayContainer />} />
