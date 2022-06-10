@@ -1,0 +1,72 @@
+@import '../../assets/partials/breakpoints';
+.home-tv-trending-container h1{
+    font-size: 2rem;
+    @include med{
+        font-size: 2.25rem;
+    }
+    @include large{
+        font-size: 2.5rem;
+    }
+    @include x-large{
+        font-size: 2.75rem;
+    }
+}
+.home-tv-trending-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: -0.5rem;
+    
+}
+.home-trending-cards-container{
+    background-color: #151625;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.home-tv-trending-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+.active-button{
+    border-radius: 4px;
+    font-size: 1.05rem;
+    padding: 0 1.5rem;
+    color: white;
+    background-color: rgba(121, 3, 168, 0.65);
+    &:hover{
+        cursor: pointer;
+        border: 1px solid white;
+    }
+    @include med{
+        font-size: 1.15rem;
+    }
+    @include large{
+        font-size: 1.25rem;
+    }
+    @include x-large{
+        font-size: 1.5rem;
+    }
+}
+.inactive-button{
+    border-radius: 4px;
+    font-size: 1.05rem;
+    padding: 0 1.5rem;
+    color: white;
+    background-color: rgba(49, 1, 69, 0.65);
+    &:hover{
+        cursor: pointer;
+        border: 1px solid white;
+    }
+    @include med{
+        font-size: 1.15rem;
+    }
+    @include large{
+        font-size: 1.25rem;
+    }
+    @include x-large{
+        font-size: 1.5rem;
+    }
+}
