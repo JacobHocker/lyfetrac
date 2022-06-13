@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BiSearchAlt } from 'react-icons/bi'
 import { Container, Row, Col } from 'react-bootstrap';
 import SearchFilmCardDisplay from "../searchFilmCardDisplay/SearchFilmCardDisplay";
 import './SearchFilmContainer.scss';
@@ -31,7 +32,8 @@ function SearchFilmContainer() {
                 <Row>
                     <Col>
                         <div className="search-film-header">
-                            <h1>Search In Film Industry</h1>
+                            <h1>Search</h1>
+                            <p>Search in the data base the movie, person, tv show, or collection you are looking for!</p>
                         </div>
                     </Col>
                 </Row>
@@ -50,14 +52,14 @@ function SearchFilmContainer() {
                                     </option>
                                 ))}
                             </select>
-                            <form onSubmit={handleSubmit}>
+                            <form onSubmit={handleSubmit} className='search-film-form'>
                                 <input 
                                     className="search-film-bar"
                                     type='text'
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
                                 />
-                                <button type='submit'>Submit Search</button>
+                                <button type='submit' className="film-search-button"><BiSearchAlt className="search-icon"/></button>
                             </form>
                         </div>
                     </Col>
