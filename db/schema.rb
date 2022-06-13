@@ -19,9 +19,7 @@ ActiveRecord::Schema.define(version: 2022_04_12_162008) do
     t.string "username"
     t.string "password"
     t.string "password_confirmation"
-    t.string "movie_list"
-    t.string "music_list"
-    t.string "game_list"
+    t.string "user_image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

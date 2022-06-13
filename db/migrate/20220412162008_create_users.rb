@@ -4,9 +4,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string :username
       t.string :password
       t.string :password_confirmation
-      t.string :movie_list
-      t.string :music_list
-      t.string :game_list
+      t.string :user_image_url
 
       t.timestamps
     end
