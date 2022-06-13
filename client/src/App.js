@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route} from 'react-router-dom';
 import CollectionDisplayContainer from './components/collectionDisplayContainer/CollectionDisplayContainer';
 import EpisodeDisplayContainer from './components/episodeDisplayContainer/EpisodeDisplayContainer';
@@ -13,13 +13,27 @@ import SeasonsContainer from './components/seasonsContainer/SeasonsContainer';
 import SeasonsDisplayContainer from './components/seasonsDisplayContainer/SeasonsDisplayContainer';
 import TelevisionContainer from './components/televisionContainer/TelevisionContainer';
 import TelevisionDisplayContainer from './components/televisionDisplayContainer/TelevisionDisplayContainer';
+import UserLoginContainer from './components/userLoginContainer/UserLoginContainer';
+import UserSignUpContainer from './components/userSignUpContainer/UserSignUpContainer';
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  //Auto-Login
+  useEffect(() => {
+    fetch('/me').then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user))
+      }
+    });
+  }, []);
   return (
     <div className="App">
       <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/login' element={<UserLoginContainer onLogin={setUser} />} />
+        <Route path='/signup' element={<UserSignUpContainer onSignUp={setUser}/>} />
         <Route path='movies' element={<MoviesContainer />} />
         <Route path='movies/:id' element={<MovieDisplayContainer />} />
         <Route path='film/search' element={<SearchFilmContainer />} />

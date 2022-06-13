@@ -40,9 +40,6 @@ function NavBar(){
                         </NavDropdown>
                         </Nav>
                         <button>Login</button>
-                        <button>Logout</button>
-                        <h2>Username</h2>
-                        <p>User Image</p>
                     </Navbar.Collapse>
                     
                 </Container>

@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  # ! USERS
+  post "/signup", to: "users#create"
+  get "/me", to: "users#show"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
+
   # ! HOME PAGE 
   get '/movie-trending-day/:api_key', to: "movies#get_movie_trending_day"
   get '/movie-trending-week/:api_key', to: "movies#get_movie_trending_week"
