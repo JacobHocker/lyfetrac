@@ -1,5 +1,6 @@
 require 'dotenv'
 class TelevisionsController < ApplicationController
+    skip_before_action :authorize
     # ! SINGLE TV SHOW = TV ID # & API KEY
     def get_television_single
         url = "https://api.themoviedb.org/3/tv/#{params[:tv_id]}?api_key=#{params[:api_key]}"

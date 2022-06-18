@@ -1,6 +1,6 @@
 require 'dotenv'
 class PersonsController < ApplicationController
-    
+    skip_before_action :authorize
     # ! POPULAR PEOPLE = API KEY & PAGE NUMBER
     def get_popular_people
         url = "https://api.themoviedb.org/3/person/popular?api_key=#{params[:api_key]}&language=en-US&page=#{params[:page_number]}"

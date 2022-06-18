@@ -1,6 +1,6 @@
 require 'dotenv'
 class CollectionsController < ApplicationController
-
+    skip_before_action :authorize
     # ! SINGLE COLLECTION = MOVIE ID # & API KEY
     def get_collection
         url = "https://api.themoviedb.org/3/collection/#{params[:collection_id]}?api_key=#{params[:api_key]}"

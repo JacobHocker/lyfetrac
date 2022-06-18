@@ -1,6 +1,6 @@
 require 'dotenv'
 class MoviesController < ApplicationController
-
+    skip_before_action :authorize
     # ! SINGLE MOVIE PARAMS = MOVIE ID # & API KEY
     def get_single_movie
         url = "https://api.themoviedb.org/3/movie/#{params[:movie_id]}?api_key=#{params[:api_key]}"

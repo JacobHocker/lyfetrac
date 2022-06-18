@@ -27,9 +27,10 @@ function App() {
       }
     });
   }, []);
+  console.log(user)
   return (
     <div className="App">
-      <NavBar />
+      <NavBar userStatus={user} user={user}/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<UserLoginContainer onLogin={setUser} />} />
