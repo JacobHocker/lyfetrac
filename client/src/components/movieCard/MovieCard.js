@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
 import './MovieCard.scss';
+import defaultMovie from '../../assets/images/defaultmovie.jpg';
 
 function MovieCard({ title, posterPath, id, rating }) {
 
@@ -23,7 +24,7 @@ function MovieCard({ title, posterPath, id, rating }) {
         <div className="card-container">
             <Link to={`/movies/${id}`}>
                 <Card  className='movie-card'>
-                    <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w185${posterPath}`}  className='movie-card-poster'/>
+                    <Card.Img variant="top" src={posterPath === null ? defaultMovie : `https://image.tmdb.org/t/p/w185${posterPath}`}  className='movie-card-poster'/>
                     <Card.Body>
                         <Card.Title className='movie-card-title'>{title}</Card.Title> 
                         

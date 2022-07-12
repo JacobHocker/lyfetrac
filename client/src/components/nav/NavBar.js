@@ -25,13 +25,13 @@ function NavBar({ userStatus, user }){
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="/people">People</NavDropdown.Item>
                         </NavDropdown>
-                        <NavDropdown title="Music" id="collapsible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.4">Coming Soon!</NavDropdown.Item>
-                        </NavDropdown>
                         <NavDropdown title="Gaming" id="collapsible-nav-dropdown">
+                            <NavDropdown.Item href="#coming-soon">Coming Soon!</NavDropdown.Item>
+                        </NavDropdown> 
+                        
+                        {/*<NavDropdown title="Music" id="collapsible-nav-dropdown">
                             <NavDropdown.Item href="#action/3.4">Coming Soon!</NavDropdown.Item>
                         </NavDropdown>
-                        </Nav>
                         {user === null ? 
                             <div className="nav-login-signup-container">
                             <Link to='/login'>
@@ -41,7 +41,8 @@ function NavBar({ userStatus, user }){
                                 <button>Sign Up</button>
                             </Link>
                             </div> :
-                            <p>{user.username}</p>}
+                        <p>{user.username}</p>}*/}
+                        </Nav>
                     </Navbar.Collapse>
                     
                 </Container>
