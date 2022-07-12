@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
 import './HomeMovieTrendingCard.scss';
+import defaultMovie from '../../assets/images/defaultmovie.jpg';
 
 function HomeMovieTrendingCard({ title, posterPath, id}) {
 
@@ -11,7 +12,7 @@ function HomeMovieTrendingCard({ title, posterPath, id}) {
         <div className="home-movie-trending-card-container">
             <Link to={`/movies/${id}`}>
                 <Card  className='home-movie-trending-card'>
-                    <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w185${posterPath}`}  className='home-movie-trending-card-poster'/>
+                    <Card.Img variant="top" src={posterPath === null ? defaultMovie : `https://image.tmdb.org/t/p/w185${posterPath}`}  className='home-movie-trending-card-poster'/>
                     <Card.Body>
                         <Card.Title className='home-movie-trending-card-title'>{title}</Card.Title> 
                     </Card.Body>

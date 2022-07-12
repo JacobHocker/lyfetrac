@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { AiFillInstagram, AiFillTwitterCircle } from 'react-icons/ai';
 import { FaImdb } from 'react-icons/fa';
 import './PeopleDisplayHeader.scss';
+import defaultPicture from '../../assets/images/defaultprofile.png';
 
 function PeopleDisplayHeader({ person, socials }) {
 
@@ -41,7 +42,7 @@ function PeopleDisplayHeader({ person, socials }) {
                 <Row>
                     <Col>
                         <div className="people-display-header-image">
-                            <img src={`https://image.tmdb.org/t/p/w185${person.profile_path}`} className="person-display-image" alt={person.name} />
+                            <img src={person.profile_path === null ? defaultPicture : `https://image.tmdb.org/t/p/w185${person.profile_path}`} className="person-display-image" alt={person.name} />
                         </div>
                     </Col>
                     <Col>

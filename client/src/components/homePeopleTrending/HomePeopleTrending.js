@@ -4,6 +4,7 @@ import Carousel from 'react-multi-carousel';
 import HomePeopleTrendingCard from "../homePeopleTrendingCard/HomePeopleTrendingCard";
 import './HomePeopleTrending.scss';
 
+
 function HomePeopleTrending() {
     const [activeTime, setActiveTime] = useState("day");
     const [people, setPeople] = useState([]);

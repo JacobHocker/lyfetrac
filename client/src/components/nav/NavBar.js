@@ -33,9 +33,14 @@ function NavBar({ userStatus, user }){
                         </NavDropdown>
                         </Nav>
                         {user === null ? 
+                            <div className="nav-login-signup-container">
                             <Link to='/login'>
                                 <button>Login</button>
-                            </Link> :
+                            </Link>
+                            <Link to='/signup'>
+                                <button>Sign Up</button>
+                            </Link>
+                            </div> :
                             <p>{user.username}</p>}
                     </Navbar.Collapse>
                     

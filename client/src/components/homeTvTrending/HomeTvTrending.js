@@ -4,6 +4,7 @@ import Carousel from 'react-multi-carousel';
 import HomeTvTrendingCard from "../homeTvTrendingCard/HomeTvTrendingCard";
 import './HomeTvTrending.scss';
 
+
 function HomeTvTrending(){
     const [activeTime, setActiveTime] = useState("day");
     const [tvShows, setTvShows] = useState([]);
