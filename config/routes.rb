@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :list_items
+  resources :lists
+  resources :list_containers
   # ! USERS
   post "/signup", to: "users#create"
   get "/me", to: "users#show"

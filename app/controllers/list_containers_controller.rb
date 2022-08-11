@@ -1,0 +1,2 @@
+class ListContainersController < ApplicationController
+end

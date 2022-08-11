@@ -1,3 +1,0 @@
-class Television < ApplicationRecord
-    
-end
