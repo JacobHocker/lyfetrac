@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    has_one :list_container
+    has_many :lists 
 
     
     validates :username, presence: true, uniqueness: true 
